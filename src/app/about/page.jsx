@@ -1,13 +1,11 @@
-import AboutOne from "@/components/AboutOne";
+import AboutThreeWhiteBG from "@/components/AboutThreeWhiteBG";
 import BrandTwo from "@/components/BrandTwo";
 import Breadcrumb from "@/components/Breadcrumb";
-import CertificateOne from "@/components/CertificateOne";
-import ChooseUsOne from "@/components/ChooseUsOne";
 import CounterOne from "@/components/CounterOne";
-import FooterOne from "@/components/FooterOne";
+import FooterThree from "@/components/FooterThree";
 import HeaderOne from "@/components/HeaderOne";
-import InstructorOne from "@/components/InstructorOne";
-import TestimonialsOne from "@/components/TestimonialsOne";
+import TestimonialsThree from "@/components/TestimonialsThree";
+import VideoOneV2 from "@/components/VideoOneV2";
 import Animation from "@/helper/Animation";
 
 export const metadata = {
@@ -28,29 +26,23 @@ const page = () => {
       {/* Breadcrumb */}
       <Breadcrumb title={"About Us"} />
 
-      {/* AboutOne */}
-      <AboutOne />
-
-      {/* InstructorOne */}
-      <InstructorOne />
-
-      {/* ChooseUsOne */}
-      <ChooseUsOne />
+      {/* AboutThreeWhiteBG */}
+      <AboutThreeWhiteBG />
 
       {/* CounterOne */}
       <CounterOne />
 
-      {/* TestimonialsOne */}
-      <TestimonialsOne />
-
       {/* BrandTwo */}
       <BrandTwo />
 
-      {/* CertificateOne */}
-      <CertificateOne />
+      {/* VideoOneV2 */}
+      <VideoOneV2 />
 
-      {/* FooterOne */}
-      <FooterOne />
+      {/* TestimonialsThree */}
+      <TestimonialsThree />
+
+      {/* FooterThree */}
+      <FooterThree />
     </>
   );
 };

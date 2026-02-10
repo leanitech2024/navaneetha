@@ -44,7 +44,7 @@ const HeaderOne = () => {
 
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
+    typeof window !== "undefined" ? window.innerWidth : 0,
   );
 
   useEffect(() => {
@@ -62,82 +62,96 @@ const HeaderOne = () => {
   const menuItems = [
     {
       label: "Home",
-      links: [
-        { href: "/", label: "Home LMS" },
-        { href: "/index-2", label: "Home Online Course" },
-        { href: "/index-3", label: "Home University" },
-        { href: "/index-4", label: "Home Tutor" },
-        { href: "/index-5", label: "Home Kindergarten" },
-        { href: "/index-6", label: " Home Kindergarten two" },
-      ],
+      href: "/",
+      // links: [
+      //   { href: "/", label: "Home LMS" },
+      //   { href: "/index-2", label: "Home Online Course" },
+      //   { href: "/index-3", label: "Home University" },
+      //   { href: "/index-4", label: "Home Tutor" },
+      //   { href: "/index-5", label: "Home Kindergarten" },
+      //   { href: "/index-6", label: " Home Kindergarten two" },
+      // ],
     },
     {
-      label: "Courses",
-      links: [
-        { href: "/course", label: "Course Grid View" },
-        { href: "/course-list-view", label: "Course List View" },
-        { href: "/course-details", label: "Course Details" },
-        { href: "/lesson-details", label: "Lesson Details" },
-      ],
+      label: "About Us",
+      href: "/about",
     },
     {
-      label: "Pages",
-      links: [
-        { href: "/about", label: "About" },
-        { href: "/about-two", label: "About Two" },
-        { href: "/about-three", label: "About Three" },
-        { href: "/about-four", label: "About Four" },
-        { href: "/product", label: "Product" },
-        { href: "/product-details", label: "Product Details" },
-        { href: "/cart", label: "Cart" },
-        { href: "/checkout", label: "Checkout" },
-        { href: "/pricing-plan", label: "Pricing Plan" },
-        { href: "/instructor", label: "Instructor" },
-        { href: "/instructor-two", label: "Instructor Two" },
-        { href: "/instructor-details", label: "Instructor Details" },
-        { href: "/tutor", label: "Premium Tutors" },
-        { href: "/tutor-details", label: "Premium Tutors Details" },
-        { href: "/faq", label: "FAQ" },
-        { href: "/tuition-jobs", label: "Tuition Jobs" },
-        { href: "/events", label: "Events" },
-        { href: "/event-details", label: "Event Details" },
-        { href: "/apply-admission", label: "Apply Admission" },
-        { href: "/gallery", label: "Gallery" },
-        { href: "/privacy-policy", label: "Privacy Policy" },
-        { href: "/favorite-course", label: "Favorite Course" },
-        { href: "/find-tutors", label: "Find Best Tutors" },
-        { href: "/book-online-class", label: "Book Online Class" },
-      ],
+      label: "Services",
+      href: "/course",
     },
+    {
+      label: "Contact",
+      href: "/contact",
+    },
+    // {
+    //   label: "Courses",
+    //   links: [
+    //     { href: "/course", label: "Course Grid View" },
+    //     { href: "/course-list-view", label: "Course List View" },
+    //     { href: "/course-details", label: "Course Details" },
+    //     { href: "/lesson-details", label: "Lesson Details" },
+    //   ],
+    // },
+    // {
+    //   label: "Pages",
+    //   links: [
+    //     { href: "/about", label: "About" },
+    //     { href: "/about-two", label: "About Two" },
+    //     { href: "/about-three", label: "About Three" },
+    //     { href: "/about-four", label: "About Four" },
+    //     { href: "/product", label: "Product" },
+    //     { href: "/product-details", label: "Product Details" },
+    //     { href: "/cart", label: "Cart" },
+    //     { href: "/checkout", label: "Checkout" },
+    //     { href: "/pricing-plan", label: "Pricing Plan" },
+    //     { href: "/instructor", label: "Instructor" },
+    //     { href: "/instructor-two", label: "Instructor Two" },
+    //     { href: "/instructor-details", label: "Instructor Details" },
+    //     { href: "/tutor", label: "Premium Tutors" },
+    //     { href: "/tutor-details", label: "Premium Tutors Details" },
+    //     { href: "/faq", label: "FAQ" },
+    //     { href: "/tuition-jobs", label: "Tuition Jobs" },
+    //     { href: "/events", label: "Events" },
+    //     { href: "/event-details", label: "Event Details" },
+    //     { href: "/apply-admission", label: "Apply Admission" },
+    //     { href: "/gallery", label: "Gallery" },
+    //     { href: "/privacy-policy", label: "Privacy Policy" },
+    //     { href: "/favorite-course", label: "Favorite Course" },
+    //     { href: "/find-tutors", label: "Find Best Tutors" },
+    //     { href: "/book-online-class", label: "Book Online Class" },
+    //   ],
+    // },
 
-    {
-      label: "Blog",
-      links: [
-        { href: "/blog", label: "Blog Grid" },
-        { href: "/blog-list", label: "Blog List" },
-        { href: "/blog-classic", label: "Blog Classic" },
-        { href: "/blog-details", label: "Blog Details" },
-      ],
-    },
-    { href: "/contact", label: "Contact" },
+    // {
+    //   label: "Blog",
+    //   links: [
+    //     { href: "/blog", label: "Blog Grid" },
+    //     { href: "/blog-list", label: "Blog List" },
+    //     { href: "/blog-classic", label: "Blog Classic" },
+    //     { href: "/blog-details", label: "Blog Details" },
+    //   ],
+    // },
+    // { href: "/contact", label: "Contact" },
   ];
 
   return (
     <>
       <div className={`side-overlay ${isMenuActive ? "show" : ""}`}></div>
       <header className={`header ${scroll ? "fixed-header" : ""}`}>
-        <div className='container container--xl'>
-          <nav className='header-inner flex-between gap-8'>
-            <div className='header-content-wrapper flex-align flex-grow-1'>
+        <div className="container container--xl">
+          <nav className="header-inner flex-between gap-8">
+            <div className="header-content-wrapper flex-align">
               {/* Logo Start */}
-              <div className='logo'>
-                <Link href='/' className='link'>
-                  <img src='assets/images/logo/logo.png' alt='Logo' />
+              <div className="logo">
+                <Link href="/" className="link">
+                  <img src="assets/images/logo/logo.png" alt="Logo" />
                 </Link>
               </div>
               {/* Logo End  */}
+
               {/* Select Start */}
-              <div className='d-sm-block d-none'>
+              {/* <div className='d-sm-block d-none'>
                 <div className='header-select border border-neutral-30 bg-main-25 rounded-pill position-relative'>
                   <span className='select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex'>
                     <i className='ph-bold ph-squares-four' />
@@ -160,58 +174,60 @@ const HeaderOne = () => {
                     <option value={"Motivation"}>Motivation</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
               {/* Select End */}
-              {/* Menu Start  */}
-              <div className='header-menu d-lg-block d-none'>
-                <ul className='nav-menu flex-align'>
-                  {menuItems.map((item, index) =>
-                    item.links ? (
-                      <li
-                        key={`menu-item-${index}`}
-                        className='nav-menu__item has-submenu'
-                      >
-                        <Link href='#' className='nav-menu__link'>
-                          {item.label}
-                        </Link>
-                        <ul className={`nav-submenu scroll-sm`}>
-                          {item.links.map((link, linkIndex) => (
-                            <li
-                              key={`submenu-item-${linkIndex}`}
-                              className={`nav-submenu__item ${
-                                pathname == link.href && "activePage"
-                              }`}
-                            >
-                              <Link
-                                href={link.href}
-                                className='nav-submenu__link hover-bg-neutral-30'
-                              >
-                                {link.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    ) : (
-                      <li
-                        key={`menu-contact-${index}`}
-                        className={`nav-menu__item ${
-                          pathname == item.href && "activePage"
-                        }`}
-                      >
-                        <Link href={item.href} className='nav-menu__link'>
-                          {item.label}
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-              {/* Menu End  */}
             </div>
+
+            {/* Menu Start  */}
+            <div className="header-menu d-lg-block d-none">
+              <ul className="nav-menu flex-align">
+                {menuItems.map((item, index) =>
+                  item.links ? (
+                    <li
+                      key={`menu-item-${index}`}
+                      className="nav-menu__item has-submenu"
+                    >
+                      <Link href="#" className="nav-menu__link">
+                        {item.label}
+                      </Link>
+                      <ul className={`nav-submenu scroll-sm`}>
+                        {item.links.map((link, linkIndex) => (
+                          <li
+                            key={`submenu-item-${linkIndex}`}
+                            className={`nav-submenu__item ${
+                              pathname == link.href && "activePage"
+                            }`}
+                          >
+                            <Link
+                              href={link.href}
+                              className="nav-submenu__link hover-bg-neutral-30"
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ) : (
+                    <li
+                      key={`menu-contact-${index}`}
+                      className={`nav-menu__item ${
+                        pathname == item.href && "activePage"
+                      }`}
+                    >
+                      <Link href={item.href} className="nav-menu__link">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
+            {/* Menu End  */}
+
             {/* Header Right start */}
-            <div className='header-right flex-align'>
-              <form
+            <div className="header-right flex-align">
+              {/* <form
                 action='#'
                 className='search-form position-relative d-xl-block d-none'
               >
@@ -232,13 +248,16 @@ const HeaderOne = () => {
                 className='info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl text-neutral-500 hover-text-white hover-border-main-600'
               >
                 <i className='ph ph-user-circle' />
+              </Link> */}
+              <Link href="/contact" className="btn btn-main rounded-pill">
+                Get Started
               </Link>
               <button
-                type='button'
-                className='toggle-mobileMenu d-lg-none text-neutral-200 flex-center'
+                type="button"
+                className="toggle-mobileMenu d-lg-none text-neutral-200 flex-center"
                 onClick={toggleMenu}
               >
-                <i className='ph ph-list' />
+                <i className="ph ph-list" />
               </button>
             </div>
             {/* Header Right End  */}
@@ -251,15 +270,15 @@ const HeaderOne = () => {
           isMenuActive ? "active" : ""
         }`}
       >
-        <button type='button' className='close-button' onClick={closeMenu}>
-          <i className='ph ph-x' />{" "}
+        <button type="button" className="close-button" onClick={closeMenu}>
+          <i className="ph ph-x" />{" "}
         </button>
-        <div className='mobile-menu__inner'>
-          <Link href='/' className='mobile-menu__logo'>
-            <img src='assets/images/logo/logo.png' alt='Logo' />
+        <div className="mobile-menu__inner">
+          <Link href="/" className="mobile-menu__logo">
+            <img src="assets/images/logo/logo.png" alt="Logo" />
           </Link>
-          <div className='mobile-menu__menu'>
-            <ul className='nav-menu flex-align nav-menu--mobile'>
+          <div className="mobile-menu__menu">
+            <ul className="nav-menu flex-align nav-menu--mobile">
               {menuItems.map((item, index) =>
                 item.links ? (
                   <li
@@ -269,15 +288,15 @@ const HeaderOne = () => {
                     }`}
                     onClick={() => handleSubmenuClick(index)}
                   >
-                    <Link href='#' className='nav-menu__link'>
+                    <Link href="#" className="nav-menu__link">
                       {item.label}
                     </Link>
                     <ul className={`nav-submenu scroll-sm`}>
                       {item.links.map((link, linkIndex) => (
-                        <li key={linkIndex} className='nav-submenu__item'>
+                        <li key={linkIndex} className="nav-submenu__item">
                           <Link
                             href={link.href}
-                            className='nav-submenu__link hover-bg-neutral-30'
+                            className="nav-submenu__link hover-bg-neutral-30"
                           >
                             {link.label}
                           </Link>
@@ -292,15 +311,15 @@ const HeaderOne = () => {
                     }`}
                     key={index}
                   >
-                    <Link href={item.href} className='nav-menu__link'>
+                    <Link href={item.href} className="nav-menu__link">
                       {item.label}
                     </Link>
                   </li>
-                )
+                ),
               )}
             </ul>
-            <div className='d-sm-none d-block mt-24'>
-              <div className='header-select border border-neutral-30 bg-main-25 rounded-pill position-relative'>
+            <div className="d-sm-none d-block mt-24">
+              {/* <div className='header-select border border-neutral-30 bg-main-25 rounded-pill position-relative'>
                 <span className='select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex'>
                   <i className='ph-bold ph-squares-four' />
                 </span>
@@ -320,7 +339,7 @@ const HeaderOne = () => {
                   <option value={"Finance"}>Finance</option>
                   <option value={"Motivation"}>Motivation</option>
                 </select>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

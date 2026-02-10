@@ -1,16 +1,87 @@
-import AboutOne from "@/components/AboutOne";
-import BannerOne from "@/components/BannerOne";
-import BlogOne from "@/components/BlogOne";
-import BrandOne from "@/components/BrandOne";
-import CertificateOne from "@/components/CertificateOne";
-import ChooseUsOne from "@/components/ChooseUsOne";
-import CounterOne from "@/components/CounterOne";
-import ExploreCourseOne from "@/components/ExploreCourseOne";
-import FeaturesOne from "@/components/FeaturesOne";
-import FooterOne from "@/components/FooterOne";
+// import AboutOne from "@/components/AboutOne";
+// import BannerOne from "@/components/BannerOne";
+// import BlogOne from "@/components/BlogOne";
+// import BrandOne from "@/components/BrandOne";
+// import CertificateOne from "@/components/CertificateOne";
+// import ChooseUsOne from "@/components/ChooseUsOne";
+// import CounterOne from "@/components/CounterOne";
+// import ExploreCourseOne from "@/components/ExploreCourseOne";
+// import FeaturesOne from "@/components/FeaturesOne";
+// import FooterOne from "@/components/FooterOne";
+// import HeaderOne from "@/components/HeaderOne";
+// import InstructorOne from "@/components/InstructorOne";
+// import TestimonialsOne from "@/components/TestimonialsOne";
+// import Animation from "@/helper/Animation";
+
+// export const metadata = {
+//   title: "EduAll - LMS, Tutors, Education & Online Course NEXT JS Template",
+//   description:
+//     "EduAll is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, EduAll provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
+// };
+
+// const page = () => {
+//   return (
+//     <>
+//       {/* HeaderOne */}
+//       <HeaderOne />
+
+//       {/* Animation */}
+//       <Animation />
+
+//       {/* BannerOne */}
+//       <BannerOne />
+
+//       {/* BrandOne */}
+//       <BrandOne />
+
+//       {/* FeaturesOne */}
+//       <FeaturesOne />
+
+//       {/* ExploreCourseOne */}
+//       <ExploreCourseOne />
+
+//       {/* AboutOne */}
+//       <AboutOne />
+
+//       {/* InstructorOne */}
+//       <InstructorOne />
+
+//       {/* CHooseUsOne */}
+//       <ChooseUsOne />
+
+//       {/* CounterOne */}
+//       <CounterOne />
+
+//       {/* TestimonialsOne */}
+//       <TestimonialsOne />
+
+//       {/* BlogOne */}
+//       <BlogOne />
+
+//       {/* CertificateOne */}
+//       <CertificateOne />
+
+//       {/* FooterOne */}
+//       <FooterOne />
+//     </>
+//   );
+// };
+
+// export default page;
+
+import AboutThree from "@/components/AboutThree";
+import BannerThree from "@/components/BannerThree";
+import BlogTwo from "@/components/BlogTwo";
+import BrandTwo from "@/components/BrandTwo";
+import ChooseUsTwo from "@/components/ChooseUsTwo";
+import CounterTwo from "@/components/CounterTwo";
+import EventOne from "@/components/EventOne";
+import FacultyOne from "@/components/FacultyOne";
+import FooterThree from "@/components/FooterThree";
 import HeaderOne from "@/components/HeaderOne";
-import InstructorOne from "@/components/InstructorOne";
-import TestimonialsOne from "@/components/TestimonialsOne";
+import InfoTwo from "@/components/InfoTwo";
+import TestimonialsThree from "@/components/TestimonialsThree";
+import VideoOne from "@/components/VideoOne";
 import Animation from "@/helper/Animation";
 
 export const metadata = {
@@ -28,41 +99,41 @@ const page = () => {
       {/* Animation */}
       <Animation />
 
-      {/* BannerOne */}
-      <BannerOne />
+      {/* BannerThree */}
+      <BannerThree />
 
-      {/* BrandOne */}
-      <BrandOne />
+      {/* InfoTwo */}
+      <InfoTwo />
 
-      {/* FeaturesOne */}
-      <FeaturesOne />
+      {/* AboutThree */}
+      <AboutThree />
 
-      {/* ExploreCourseOne */}
-      <ExploreCourseOne />
+      {/* VideoOne */}
+      <VideoOne />
 
-      {/* AboutOne */}
-      <AboutOne />
+      {/* CounterTwo */}
+      <CounterTwo />
 
-      {/* InstructorOne */}
-      <InstructorOne />
+      {/* FacultyOne */}
+      <FacultyOne />
 
-      {/* CHooseUsOne */}
-      <ChooseUsOne />
+      {/* ChooseUsTwo */}
+      <ChooseUsTwo />
 
-      {/* CounterOne */}
-      <CounterOne />
+      {/* TestimonialsThree */}
+      <TestimonialsThree />
 
-      {/* TestimonialsOne */}
-      <TestimonialsOne />
+      {/* EventOne */}
+      <EventOne />
 
-      {/* BlogOne */}
-      <BlogOne />
+      {/* BlogTwo */}
+      <BlogTwo />
 
-      {/* CertificateOne */}
-      <CertificateOne />
+      {/* BrandTwo */}
+      <BrandTwo />
 
-      {/* FooterOne */}
-      <FooterOne />
+      {/* FooterThree */}
+      <FooterThree />
     </>
   );
 };
