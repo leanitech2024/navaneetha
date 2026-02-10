@@ -1,546 +1,217 @@
 import Link from "next/link";
 
+const SERVICES_DATA = [
+  {
+    id: 1,
+    title: "IT Training & Online MBA/BBA Guidance",
+    category: "IT & Management",
+    tag: "Training & Courses",
+    tagClass: "bg-main-three-600",
+    image: "assets/images/thumbs/faculty-img1.png",
+    duration: 200,
+    features: [
+      "Specialized IT Training",
+      "Online MBA Courses",
+      "Online BBA Courses",
+      "Expert Faculties",
+    ],
+  },
+  {
+    id: 2,
+    title: "Admission for Abroad University / Colleges",
+    category: "Abroad University",
+    tag: "Global Opportunities",
+    tagClass: "bg-main-two-600",
+    image: "assets/images/thumbs/faculty-img2.png",
+    duration: 400,
+    features: [
+      "Rejent European University (San Marino)",
+      "Southern Connecticut State University",
+      "School of Business",
+      "Global Exposure",
+    ],
+  },
+  {
+    id: 3,
+    title: "Medical, NEET & KCET Guidance",
+    category: "Medical & Engineering",
+    tag: "Pro Guidance",
+    tagClass: "bg-main-three-600",
+    image: "assets/images/thumbs/faculty-img3.png",
+    duration: 600,
+    features: [
+      "MBBS / MD / MS Guidance",
+      "KEA / All India Registration Support",
+      "Management Quota in Top Colleges",
+      "Complete Admission Coordination",
+    ],
+  },
+  {
+    id: 4,
+    title: "Engineering Admissions (All Branches)",
+    category: "B.Tech / B.E",
+    tag: "Top Colleges",
+    tagClass: "bg-main-two-600",
+    image: "assets/images/thumbs/faculty-img4.png",
+    duration: 200,
+    features: [
+      "Computer Science (CSE)",
+      "Information Science (ISE)",
+      "Electronics (ECE)",
+      "Mechanical & Civil",
+    ],
+    isLinkCategory: true,
+  },
+  {
+    id: 5,
+    title: "Management Quota Admissions",
+    category: "Management",
+    tag: "Direct Admission",
+    tagClass: "bg-main-three-600",
+    image: "assets/images/thumbs/faculty-img5.png",
+    duration: 400,
+    features: [
+      "MBA / PGDM Direct Admission",
+      "BBA / B.Com / BCA",
+      "Top B-Schools Selection",
+      "Placement Assistance",
+    ],
+    isLinkCategory: true,
+  },
+  {
+    id: 6,
+    title: "Pharmacy, Nursing & Physiotherapy",
+    category: "Healthcare",
+    tag: "Career Oriented",
+    tagClass: "bg-main-two-600",
+    image: "assets/images/thumbs/faculty-img6.png",
+    duration: 600,
+    features: [
+      "B.Pharm / D.Pharm",
+      "B.Sc Nursing / GNM",
+      "Bachelor of Physiotherapy (BPT)",
+      "Allied Health Sciences",
+    ],
+    isLinkCategory: true,
+  },
+];
+
 const FacultyOne = () => {
   return (
-    <section className='faculty pb-120 bg-main-25'>
-      <div className='container'>
-        <div className='section-heading text-center'>
-          <div className='flex-align d-inline-flex gap-8 mb-16 wow bounceInDown'>
-            <span className='text-main-600 text-2xl d-flex'>
-              <i className='ph-bold ph-book-open' />
+    <section className="faculty pb-120 bg-main-25">
+      <div className="container">
+        {/* Section Heading */}
+        <div className="section-heading text-center">
+          <div className="flex-align d-inline-flex gap-8 mb-16 wow bounceInDown">
+            <span className="text-main-600 text-2xl d-flex">
+              <i className="ph-bold ph-book-open" />
             </span>
-            <h5 className='text-main-600 mb-0'>
-              Explore Faculty Of University
-            </h5>
+            <h5 className="text-main-600 mb-0">Our Premium Services</h5>
           </div>
-          <h2 className='mb-24 wow bounceIn'>Top Listed Faculty</h2>
-          <p className=' wow bounceInUp'>
-            Certainly cordially, sweetness perceived day's end; why knowledge, a
-            perception to cherish deeply.
+          <h2 className="mb-24 wow bounceIn">
+            Comprehensive Education & Admission Support
+          </h2>
+          <p className="wow bounceInUp">
+            From IT training to abroad university admissions and medical seat
+            guidance, we cover it all.
           </p>
         </div>
-        <div className='row gy-4'>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={200}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img1.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium'>
-                    Admission Open
+
+        {/* Dynamic Cards Grid */}
+        <div className="row gy-4">
+          {SERVICES_DATA.map((service) => (
+            <div
+              key={service.id}
+              className="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration={service.duration}
+            >
+              <div className="scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md d-flex flex-column">
+                <div className="course-item__thumb rounded-12 overflow-hidden position-relative">
+                  <Link href="/course-details" className="w-100 h-100">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="scale-hover-item__img rounded-12 cover-img transition-2"
+                    />
+                  </Link>
+                </div>
+
+                <div className="pt-32 pb-24 px-16 position-relative flex-grow-1 d-flex flex-column">
+                  <span
+                    className={`text-up py-12 px-24 rounded-8 ${service.tagClass} text-white fw-medium w-fit-content mb-16`}
+                  >
+                    {service.tag}
                   </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        Explore 4,000+ Free Online
-                        <i className='ph-bold ph-squares-four' />
+
+                  <div className="flex-between gap-8 flex-wrap mb-16">
+                    {service.isLinkCategory ? (
+                      <Link
+                        href="/course"
+                        className="py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white"
+                      >
+                        <span className="text-xl d-flex">
+                          <i className="ph-bold ph-squares-four" />
+                        </span>
+                        {service.category}
+                      </Link>
+                    ) : (
+                      <span className="text-xl fw-bold text-main-600">
+                        {service.category}
                       </span>
-                      CSE
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
+                    )}
                   </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Faculty of Engineering Admissions
+
+                  <h4 className="mb-28">
+                    <Link href="/course-details" className="link text-line-2">
+                      {service.title}
                     </Link>
                   </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
+
+                  <ul
+                    className="check-list mt-auto d-grid"
+                    style={{ gridTemplateColumns: "1fr 1fr", gap: "12px" }}
                   >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
+                    {service.features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="d-flex align-items-start gap-12 mb-0"
+                      >
+                        <span className="flex-shrink-0 text-main-600 text-xl d-flex mt-4">
+                          <i className="ph-bold ph-check-circle" />
+                        </span>
+                        <span className="text-neutral-500 text-md">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+                    <Link
+                      href="/contact"
+                      className="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                    >
+                      Enquire Now
+                      <i className="ph ph-arrow-right" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={400}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img2.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-two-600 text-white fw-medium'>
-                    Admission Closed
-                  </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        <i className='ph-bold ph-squares-four' />
-                      </span>
-                      ARTS
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Arts and Humanities Admissions
-                    </Link>
-                  </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
-                  >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={600}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img3.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium'>
-                    Admission Open
-                  </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        <i className='ph-bold ph-squares-four' />
-                      </span>
-                      BBA
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Social And Sciences Admissions
-                    </Link>
-                  </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
-                  >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={200}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img4.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-two-600 text-white fw-medium'>
-                    Admission Closed
-                  </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        <i className='ph-bold ph-squares-four' />
-                      </span>
-                      CSE
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Computer Science Admissions
-                    </Link>
-                  </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
-                  >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={400}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img5.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-three-600 text-white fw-medium'>
-                    Admission Open
-                  </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        <i className='ph-bold ph-squares-four' />
-                      </span>
-                      BBA
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Business and Economics Admissions
-                    </Link>
-                  </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
-                  >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className='col-lg-4 col-md-6'
-            data-aos='fade-up'
-            data-aos-duration={600}
-          >
-            <div className='scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md'>
-              <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                <Link href='/course-details' className='w-100 h-100'>
-                  <img
-                    src='assets/images/thumbs/faculty-img6.png'
-                    alt='Course Image'
-                    className='scale-hover-item__img rounded-12 cover-img transition-2'
-                  />
-                </Link>
-              </div>
-              <div className='pt-32 pb-24 px-16 position-relative'>
-                <div className=''>
-                  <span className='text-up py-12 px-24 rounded-8 bg-main-two-600 text-white fw-medium'>
-                    Admission Closed
-                  </span>
-                  <div className='flex-between gap-8 flex-wrap mb-16'>
-                    <Link
-                      href='/course'
-                      className='py-8 px-20 rounded-8 flex-align gap-8 text-main-600 fw-medium bg-main-25 hover-bg-main-600 hover-text-white'
-                    >
-                      <span className='text-xl d-flex'>
-                        <i className='ph-bold ph-squares-four' />
-                      </span>
-                      Medical
-                    </Link>
-                    <div className='flex-align gap-4'>
-                      <span className='text-2xl fw-medium text-warning-600 d-flex'>
-                        <i className='ph-fill ph-star' />
-                      </span>
-                      <span className='text-lg text-neutral-700'>
-                        4.7
-                        <span className='text-neutral-100'>(6.4k)</span>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 className='mb-28'>
-                    <Link href='/course-details' className='link text-line-2'>
-                      Medicine and Health Sciences Admissions
-                    </Link>
-                  </h4>
-                  <ul className='check-list'>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Playground
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Library</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Canteen</span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>
-                        Stationary
-                      </span>
-                    </li>
-                    <li className='flex-align gap-8'>
-                      <img src='assets/images/icons/check.png' alt='' />
-                      <span className='text-neutral-500 text-md'>Hostel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0'>
-                  <Link
-                    href='/contact'
-                    className='flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold'
-                    tabIndex={0}
-                  >
-                    Apply Now
-                    <i className='ph ph-arrow-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-        <div className='text-center mt-40'>
+
+        {/* Bottom Button */}
+        {/*        <div className="text-center mt-40">
           <Link
-            href='/about'
-            className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'
+            href="/about"
+            className="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8"
           >
             See All University
-            <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
+            <i className="ph-bold ph-arrow-up-right d-flex text-lg" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

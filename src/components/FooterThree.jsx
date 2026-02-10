@@ -137,16 +137,16 @@ const FooterThree = () => {
                   </span>
                   <div className="">
                     <Link
-                      href="/tel:(207)555-0119"
+                      href="/tel:9980030616"
                       className="text-white d-block hover-text-main-600 mb-4"
                     >
-                      (207) 555-0119
+                      +91 9980030616
                     </Link>
                     <Link
-                      href="/tel:(704)555-0127"
+                      href="/tel:9844066230"
                       className="text-white d-block hover-text-main-600 mb-0"
                     >
-                      (704) 555-0127
+                      +91 9844066230
                     </Link>
                   </div>
                 </div>
@@ -156,16 +156,10 @@ const FooterThree = () => {
                   </span>
                   <div className="">
                     <Link
-                      href="/mailto:dwallo@gmail.com"
+                      href="/mailto:navaneethaeducationtrust@gmail.com"
                       className="text-white d-block hover-text-main-600 mb-4"
                     >
-                      dwallo@gmail.com
-                    </Link>
-                    <Link
-                      href="/mailto:Navneeta Education Trust@gmail.com"
-                      className="text-white d-block hover-text-main-600 mb-0"
-                    >
-                      Navneeta Education Trust@gmail.com
+                      <span>Mail:</span> navaneethaeducationtrust@gmail.com
                     </Link>
                   </div>
                 </div>
@@ -175,10 +169,7 @@ const FooterThree = () => {
                   </span>
                   <div className="">
                     <span className="text-white d-block mb-4">
-                      5488 srker Rd .
-                    </span>
-                    <span className="text-white d-block mb-0">
-                      8745 doer Dr.
+                      Rajajinagar (Near Metro Station)
                     </span>
                   </div>
                 </div>
@@ -233,7 +224,7 @@ const FooterThree = () => {
                 {" "}
                 Copyright © 2025{" "}
                 <span className="fw-semibold">
-                  Navneeta Education Trust{" "}
+                  Navaneetha Education Trust{" "}
                 </span>{" "}
                 All Rights Reserved.
               </p>

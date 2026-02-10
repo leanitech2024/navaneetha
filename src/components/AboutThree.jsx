@@ -39,13 +39,11 @@ const AboutThree = () => {
                       >
                         {({ isVisible }) => (
                           <h2 className="mb-16 text-white counter">
-                            {isVisible ? <CountUp end={26} /> : null}K
+                            {isVisible ? <CountUp end={2026} /> : null}
                           </h2>
                         )}
                       </VisibilitySensor>
-                      <span className="text-white">
-                        Students Active Our University
-                      </span>
+                      <span className="text-white">Admissions Open</span>
                       {/*  <div className='enrolled-students style-two mt-12'>
                         <img
                           src='assets/images/thumbs/enroll-student-img1.png'
@@ -100,15 +98,15 @@ const AboutThree = () => {
                     <span className="text-main-600 text-2xl d-flex">
                       <i className="ph-bold ph-book-open" />
                     </span>
-                    <h5 className="text-main-600 mb-0">About University Us</h5>
+                    <h5 className="text-main-600 mb-0">About Us</h5>
                   </div>
                   <h2 className="mb-24 wow bounceInRight">
-                    Our Commitment to Diversity Leadership and Governance
+                    Experience we have to provide End to End guidance
                   </h2>
                   <p className="text-neutral-500 text-line-2 wow bounceInUp">
-                    We embrace innovation and creativity as catalysts for
-                    positive change, driving forward-thinking research, teaching
-                    methodologies
+                    We provide comprehensive guidance for a wide range of
+                    courses ensuring a smooth admission process for every
+                    student.
                   </p>
                 </div>
                 <div className="grid-cols-2">
@@ -126,11 +124,11 @@ const AboutThree = () => {
                     </span>
                     <div className="flex-grow-1">
                       <h6 className="text-neutral-800 text-xl fw-medium mb-8">
-                        Undergraduate
+                        Medical Sciences
                       </h6>
                       <div className="flex-align gap-8 text-neutral-500">
-                        <i className="d-flex text-lg ph-bold ph-clock" />
-                        Onsite
+                        {/* <i className="d-flex text-lg ph-bold ph-check" /> */}
+                        MD, BDS, MBBS, NEET / JIPMER
                       </div>
                     </div>
                   </div>
@@ -148,11 +146,11 @@ const AboutThree = () => {
                     </span>
                     <div className="flex-grow-1">
                       <h6 className="text-neutral-800 text-xl fw-medium mb-8">
-                        Graduate
+                        Engineering
                       </h6>
                       <div className="flex-align gap-8 text-neutral-500">
-                        <i className="d-flex text-lg ph-bold ph-clock" />
-                        Onsite
+                        {/* <i className="d-flex text-lg ph-bold ph-check" /> */}
+                        All Branches
                       </div>
                     </div>
                   </div>
@@ -170,11 +168,11 @@ const AboutThree = () => {
                     </span>
                     <div className="flex-grow-1">
                       <h6 className="text-neutral-800 text-xl fw-medium mb-8">
-                        Post Graduate
+                        Management & Commerce
                       </h6>
                       <div className="flex-align gap-8 text-neutral-500">
-                        <i className="d-flex text-lg ph-bold ph-clock" />
-                        Onsite
+                        {/* <i className="d-flex text-lg ph-bold ph-check" /> */}
+                        MBA, BBA, BCA, B.Com, B.Sc
                       </div>
                     </div>
                   </div>
@@ -192,11 +190,11 @@ const AboutThree = () => {
                     </span>
                     <div className="flex-grow-1">
                       <h6 className="text-neutral-800 text-xl fw-medium mb-8">
-                        Online education
+                        Pharmacy & Specialty
                       </h6>
                       <div className="flex-align gap-8 text-neutral-500">
-                        <i className="d-flex text-lg ph-bold ph-clock" />
-                        Onsite
+                        {/* <i className="d-flex text-lg ph-bold ph-check" /> */}
+                        B.Pharm, D.Pharm, Physiotherapy, B.A.
                       </div>
                     </div>
                   </div>

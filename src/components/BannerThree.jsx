@@ -90,30 +90,29 @@ const BannerThree = () => {
                         <i className="ph-bold ph-book-open" />
                       </span>
                       <h5 className="text-yellow-600 mb-0 fw-medium">
-                        Elevate Your Learning
+                        Admissions Open
                       </h5>
                     </div>
                     <h1 className="display2 mb-24 text-white fw-medium wow bounceInLeft">
-                      Empowering Minds,{" "}
+                      Top Colleges & Schools in{" "}
                       <span
                         className="text-yellow-600  wow bounceInRight"
                         data-wow-duration="2s"
                         data-wow-delay=".5s"
                       >
                         {" "}
-                        Shaping{" "}
+                        Our City!{" "}
                       </span>{" "}
-                      Futures
                     </h1>
                     <p className="text-white text-line-2 wow bounceInDown">
-                      Welcome to Navneeta Education Trust, where learning knows
-                      no bounds. Whether you're a student, professional, or
-                      lifelong learner...
+                      Looking to enroll your ward in a prestigious school or
+                      college? I can help ensure a smooth, hassle-free admission
+                      process at the institution of your choice.
                     </p>
                   </div>
                   <div className="buttons-wrapper flex-align flex-wrap gap-24 mt-40">
                     <Link
-                      href="/sign-in"
+                      href="/contact"
                       className="btn btn-main rounded-pill flex-align gap-8  wow bounceInLeft"
                       data-wow-duration="1s"
                       data-wow-delay=".5s"
@@ -136,7 +135,7 @@ const BannerThree = () => {
                         href="/course"
                         className="text-white hover-text-decoration-underline hover-text-main-two-600"
                       >
-                        See All University
+                        Courses Available
                       </Link>
                     </div>
                   </div>
@@ -161,30 +160,29 @@ const BannerThree = () => {
                         <i className="ph-bold ph-book-open" />
                       </span>
                       <h5 className="text-yellow-600 mb-0 fw-medium">
-                        Elevate Your Learning
+                        Courses Available:
                       </h5>
                     </div>
                     <h1 className="display2 mb-24 text-white fw-medium wow bounceInLeft">
-                      Engaging Personalities,
+                      MBBS | BDS | BTech |
                       <span
                         className="text-yellow-600  wow bounceInRight"
                         data-wow-duration="2s"
                         data-wow-delay=".5s"
                       >
                         {" "}
-                        Molding{" "}
+                        MBA | BBA{" "}
                       </span>{" "}
-                      Fates
+                      BCA
                     </h1>
                     <p className="text-white text-line-2 wow bounceInDown">
-                      Welcome to Navneeta Education Trust, where learning knows
-                      no bounds. Whether you're a student, professional, or
-                      lifelong learner...
+                      Application forms are out, and the admission process has
+                      begun! Secure your seat today.
                     </p>
                   </div>
                   <div className="buttons-wrapper flex-align flex-wrap gap-24 mt-40">
                     <Link
-                      href="/sign-in"
+                      href="/contact"
                       className="btn btn-main rounded-pill flex-align gap-8  wow bounceInLeft"
                       data-wow-duration="1s"
                       data-wow-delay=".5s"
@@ -207,7 +205,7 @@ const BannerThree = () => {
                         href="/course"
                         className="text-white hover-text-decoration-underline hover-text-main-two-600"
                       >
-                        See All University
+                        See All Courses
                       </Link>
                     </div>
                   </div>
@@ -233,35 +231,34 @@ const BannerThree = () => {
                         <i className="ph-bold ph-book-open" />
                       </span>
                       <h5 className="text-yellow-600 mb-0 fw-medium">
-                        Elevate Your Learning
+                        Secure Your Future
                       </h5>
                     </div>
                     <h1 className="display2 mb-24 text-white fw-medium wow bounceInLeft">
-                      Attracting Characters,
+                      Engineering | PUC |
                       <span
                         className="text-yellow-600  wow bounceInRight"
                         data-wow-duration="2s"
                         data-wow-delay=".5s"
                       >
                         {" "}
-                        Adornment{" "}
+                        Top{" "}
                       </span>{" "}
-                      Fates
+                      Schools
                     </h1>
                     <p className="text-white text-line-2 wow bounceInDown">
-                      Welcome to Navneeta Education Trust, where learning knows
-                      no bounds. Whether you're a student, professional, or
-                      lifelong learner...
+                      Connect with me today for guidance and support! Let’s
+                      secure the best future for your wards!
                     </p>
                   </div>
                   <div className="buttons-wrapper flex-align flex-wrap gap-24 mt-40">
                     <Link
-                      href="/sign-in"
+                      href="/contact"
                       className="btn btn-main rounded-pill flex-align gap-8  wow bounceInLeft"
                       data-wow-duration="1s"
                       data-wow-delay=".5s"
                     >
-                      Apply Now
+                      Contact Us
                       <i className="ph-bold ph-arrow-up-right d-flex text-lg" />
                     </Link>
                     <div
@@ -276,10 +273,10 @@ const BannerThree = () => {
                         <i className="ph-fill ph-play" />
                       </span>
                       <Link
-                        href="/course"
+                        href="/about"
                         className="text-white hover-text-decoration-underline hover-text-main-two-600"
                       >
-                        See All University
+                        Raghu Chavan: 9980030616
                       </Link>
                     </div>
                   </div>
