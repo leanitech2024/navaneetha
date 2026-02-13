@@ -94,7 +94,7 @@ const BannerThree = () => {
                       </h5>
                     </div>
                     <h1 className="display2 mb-24 text-white fw-medium wow bounceInLeft">
-                      Top Colleges & Schools in{" "}
+                      Top Colleges & University in{" "}
                       <span
                         className="text-yellow-600  wow bounceInRight"
                         data-wow-duration="2s"
@@ -164,14 +164,14 @@ const BannerThree = () => {
                       </h5>
                     </div>
                     <h1 className="display2 mb-24 text-white fw-medium wow bounceInLeft">
-                      MBBS | BDS | BTech |
+                      MBBS, BDS, BTech, BE
                       <span
                         className="text-yellow-600  wow bounceInRight"
                         data-wow-duration="2s"
                         data-wow-delay=".5s"
                       >
                         {" "}
-                        MBA | BBA{" "}
+                        MBA, BBA,{" "}
                       </span>{" "}
                       BCA
                     </h1>

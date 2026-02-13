@@ -22,7 +22,7 @@ const SERVICES_DATA = [
     category: "Abroad University",
     tag: "Global Opportunities",
     tagClass: "bg-main-two-600",
-    image: "assets/images/thumbs/faculty-img2.png",
+    image: "assets/images/all/Rejent-European-University.jpg",
     duration: 400,
     features: [
       "Rejent European University (San Marino)",
@@ -37,7 +37,7 @@ const SERVICES_DATA = [
     category: "Medical & Engineering",
     tag: "Pro Guidance",
     tagClass: "bg-main-three-600",
-    image: "assets/images/thumbs/faculty-img3.png",
+    image: "assets/images/all/RR-Medical-College.jpg",
     duration: 600,
     features: [
       "MBBS / MD / MS Guidance",
@@ -52,7 +52,7 @@ const SERVICES_DATA = [
     category: "B.Tech / B.E",
     tag: "Top Colleges",
     tagClass: "bg-main-two-600",
-    image: "assets/images/thumbs/faculty-img4.png",
+    image: "assets/images/all/RV-College-Engineering.jpg",
     duration: 200,
     features: [
       "Computer Science (CSE)",
@@ -68,7 +68,7 @@ const SERVICES_DATA = [
     category: "Management",
     tag: "Direct Admission",
     tagClass: "bg-main-three-600",
-    image: "assets/images/thumbs/faculty-img5.png",
+    image: "assets/images/all/christ-university-y.jpg",
     duration: 400,
     features: [
       "MBA / PGDM Direct Admission",
@@ -84,7 +84,7 @@ const SERVICES_DATA = [
     category: "Healthcare",
     tag: "Career Oriented",
     tagClass: "bg-main-two-600",
-    image: "assets/images/thumbs/faculty-img6.png",
+    image: "assets/images/all/ms-ramaiha.jpg",
     duration: 600,
     features: [
       "B.Pharm / D.Pharm",

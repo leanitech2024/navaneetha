@@ -82,6 +82,7 @@ import HeaderOne from "@/components/HeaderOne";
 import InfoTwo from "@/components/InfoTwo";
 import TestimonialsThree from "@/components/TestimonialsThree";
 import VideoOne from "@/components/VideoOne";
+import TopTicker from "@/components/TopTicker";
 import Animation from "@/helper/Animation";
 
 export const metadata = {
@@ -94,6 +95,9 @@ export const metadata = {
 const page = () => {
   return (
     <>
+      {/* TopTicker */}
+      <TopTicker />
+
       {/* HeaderOne */}
       <HeaderOne />
 

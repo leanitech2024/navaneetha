@@ -44,8 +44,8 @@ const InfoTwo = () => {
                 <div>
                   <h4 className="mb-16">Documentation Help</h4>
                   <p className="text-neutral-700">
-                    Complete assistance with counseling and document
-                    verification.
+                    Complete assistance with counseling and document regarding
+                    KEA & MCC.
                   </p>
                 </div>
               </div>

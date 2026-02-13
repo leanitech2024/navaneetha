@@ -39,11 +39,11 @@ const AboutThree = () => {
                       >
                         {({ isVisible }) => (
                           <h2 className="mb-16 text-white counter">
-                            {isVisible ? <CountUp end={2026} /> : null}
+                            {isVisible ? <CountUp end={27} /> : null}+
                           </h2>
                         )}
                       </VisibilitySensor>
-                      <span className="text-white">Admissions Open</span>
+                      <span className="text-white">Years of Experience</span>
                       {/*  <div className='enrolled-students style-two mt-12'>
                         <img
                           src='assets/images/thumbs/enroll-student-img1.png'
@@ -101,7 +101,8 @@ const AboutThree = () => {
                     <h5 className="text-main-600 mb-0">About Us</h5>
                   </div>
                   <h2 className="mb-24 wow bounceInRight">
-                    Experience we have to provide End to End guidance
+                    Leveraging our expertise, we provide comprehensive,
+                    end-to-end guidance.
                   </h2>
                   <p className="text-neutral-500 text-line-2 wow bounceInUp">
                     We provide comprehensive guidance for a wide range of
