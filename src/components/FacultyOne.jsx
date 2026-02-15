@@ -15,6 +15,7 @@ const SERVICES_DATA = [
       "Online BBA Courses",
       "Expert Faculties",
     ],
+    link: "/it-training",
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const SERVICES_DATA = [
       "School of Business",
       "Global Exposure",
     ],
+    link: "/abroad-education",
   },
   {
     id: 3,
@@ -45,6 +47,7 @@ const SERVICES_DATA = [
       "Management Quota in Top Colleges",
       "Complete Admission Coordination",
     ],
+    link: "/medical-admission",
   },
   {
     id: 4,
@@ -61,6 +64,7 @@ const SERVICES_DATA = [
       "Mechanical & Civil",
     ],
     isLinkCategory: true,
+    link: "/engineering-admission",
   },
   {
     id: 5,
@@ -77,6 +81,7 @@ const SERVICES_DATA = [
       "Placement Assistance",
     ],
     isLinkCategory: true,
+    link: "/management-admission",
   },
   {
     id: 6,
@@ -93,6 +98,7 @@ const SERVICES_DATA = [
       "Allied Health Sciences",
     ],
     isLinkCategory: true,
+    link: "/pharmacy-nursing",
   },
 ];
 
@@ -128,11 +134,11 @@ const FacultyOne = () => {
             >
               <div className="scale-hover-item bg-white rounded-16 p-12 h-100 box-shadow-md d-flex flex-column">
                 <div className="course-item__thumb rounded-12 overflow-hidden position-relative">
-                  <Link href="/course-details" className="w-100 h-100">
+                  <Link href={service.link} className="w-100 h-100">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="scale-hover-item__img rounded-12 cover-img transition-2"
+                      className="scale-hover-item__img rounded-12 contain-img transition-2"
                     />
                   </Link>
                 </div>
@@ -162,10 +168,8 @@ const FacultyOne = () => {
                     )}
                   </div>
 
-                  <h4 className="mb-28">
-                    <Link href="/course-details" className="link text-line-2">
-                      {service.title}
-                    </Link>
+                  <h4 className="mb-0 text-main-600">
+                    <Link href={service.link}>{service.title}</Link>
                   </h4>
 
                   <ul
@@ -189,7 +193,7 @@ const FacultyOne = () => {
 
                   <div className="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                     <Link
-                      href="/contact"
+                      href={service.link}
                       className="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                     >
                       Enquire Now
@@ -204,11 +208,11 @@ const FacultyOne = () => {
 
         {/* Bottom Button */}
         {/*        <div className="text-center mt-40">
-          <Link
-            href="/about"
-            className="btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8"
-          >
-            See All University
+                <Link
+                  href="/it-training"
+                  className="btn btn-outline-main rounded-pill py-9"
+                >
+                  View Detailsl University
             <i className="ph-bold ph-arrow-up-right d-flex text-lg" />
           </Link>
         </div> */}
