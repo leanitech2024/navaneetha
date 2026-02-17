@@ -53,7 +53,7 @@ const BannerTwo = () => {
                 And Succeed
               </h1>
               <p className="text-neutral-500 text-line-2 wow bounceInUp">
-                Welcome to Navneeta Education Trust, where learning knows no
+                Welcome to Navaneetha  Education Trust, where learning knows no
                 bounds. Whether you're a student, professional, or lifelong
                 learner...
               </p>

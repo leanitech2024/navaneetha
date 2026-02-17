@@ -134,7 +134,7 @@ const EventDetailsOne = () => {
                   </li>
                 </ul>
                 <p className="mt-16 text-neutral-700">
-                  Students can register for the workshops through the Navneeta
+                  Students can register for the workshops through the Navaneetha 
                   Education Trust platform. Limited seats are available, so
                   early registration is recommended.
                 </p>

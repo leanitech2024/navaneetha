@@ -204,7 +204,7 @@ const FooterFour = () => {
                   className="mb-24"
                 />
                 <p className="mb-24 text-neutral-30">
-                  Navneeta Education Trust exceeded all my expectations! The
+                  Navaneetha  Education Trust exceeded all my expectations! The
                   instructors were not only experts.
                 </p>
                 <ul className="d-flex align-items-center gap-12 justify-content-center">
@@ -254,7 +254,7 @@ const FooterFour = () => {
               <p className="text-md text-white">
                 Copyright ©2025
                 <span className="text-warning-600">
-                  Navneeta Education Trust
+                  Navaneetha  Education Trust
                 </span>
                 . Designed By Wowtheme7
               </p>

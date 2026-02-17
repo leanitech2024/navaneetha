@@ -94,10 +94,10 @@ const TestimonialsOne = () => {
                   <h5 className="text-main-600 mb-0">What Our Students Say</h5>
                 </div>
                 <h2 className="mb-24 wow bounceIn">
-                  Testimonials from Happy Learners for Navneeta Education Trust
+                  Testimonials from Happy Learners for Navaneetha  Education Trust
                 </h2>
                 <p className="text-neutral-500 text-line-2 wow bounceInUp">
-                  16+ million Students are already learning on Navneeta
+                  16+ million Students are already learning on Navaneetha 
                   Education Trust Platform
                 </p>
               </div>
@@ -129,7 +129,7 @@ const TestimonialsOne = () => {
                     data-aos="fade-left"
                     data-aos-duration={1200}
                   >
-                    "Enrolling in courses at Navneeta Education Trust was one of
+                    "Enrolling in courses at Navaneetha  Education Trust was one of
                     the best decisions I've made for my career. The flexibility
                     of the online learning platform allowed me to study at my
                     own pace while balancing my work”
@@ -168,7 +168,7 @@ const TestimonialsOne = () => {
                     data-aos="fade-left"
                     data-aos-duration={1200}
                   >
-                    "Signing up for courses at Navneeta Education Trust was
+                    "Signing up for courses at Navaneetha  Education Trust was
                     quite possibly of the best choice I've made for my vocation.
                     The adaptability of the internet learning stage permitted me
                     to learn at my own speed while adjusting my work"

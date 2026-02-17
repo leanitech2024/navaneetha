@@ -162,10 +162,10 @@ const FooterTwo = () => {
                       dwallo@gmail.com
                     </Link>
                     <Link
-                      href="/mailto:Navneeta Education Trust@gmail.com"
+                      href="/mailto:Navaneetha  Education Trust@gmail.com"
                       className="text-white d-block hover-text-main-600 mb-0"
                     >
-                      Navneeta Education Trust@gmail.com
+                      Navaneetha  Education Trust@gmail.com
                     </Link>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const FooterTwo = () => {
                 {" "}
                 Copyright © 2025{" "}
                 <span className="fw-semibold">
-                  Navneeta Education Trust{" "}
+                  Navaneetha  Education Trust{" "}
                 </span>{" "}
                 All Rights Reserved.
               </p>

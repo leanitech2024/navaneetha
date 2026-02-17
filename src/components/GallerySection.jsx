@@ -16,7 +16,7 @@ const GallerySection = () => {
             </div>
             <h2 className="mb-24">Explore Our Gallery</h2>
             <p className="">
-              Students can register for the workshops through the Navneeta
+              Students can register for the workshops through the Navaneetha 
               Education Trust platform. Limited seats are available
             </p>
           </div>

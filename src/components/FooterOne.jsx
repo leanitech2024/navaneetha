@@ -25,7 +25,7 @@ const FooterOne = () => {
                   </Link>
                 </div>
                 <p className="my-32">
-                  Navneeta Education Trust exceeded all my expectations! The
+                  Navaneetha  Education Trust exceeded all my expectations! The
                   instructors were not only experts
                 </p>
                 <ul className="social-list flex-align gap-24">
@@ -193,10 +193,10 @@ const FooterOne = () => {
                       dwallo@gmail.com
                     </Link>
                     <Link
-                      href="/mailto:Navneeta Education Trust@gmail.com"
+                      href="/mailto:Navaneetha  Education Trust@gmail.com"
                       className="text-neutral-500 d-block hover-text-main-600 mb-0"
                     >
-                      Navneeta Education Trust@gmail.com
+                      Navaneetha  Education Trust@gmail.com
                     </Link>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ const FooterOne = () => {
               <p className="bottom-footer__text">
                 {" "}
                 Copyright © 2025{" "}
-                <span className="fw-semibold">Navneeta Education Trust </span>
+                <span className="fw-semibold">Navaneetha  Education Trust </span>
                 All Rights Reserved.
               </p>
               <div className="footer-links">

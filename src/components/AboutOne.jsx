@@ -103,14 +103,14 @@ const AboutOne = () => {
                   <div className="flex-align gap-8 mb-16 wow bounceInDown">
                     <span className="w-8 h-8 bg-main-600 rounded-circle" />
                     <h5 className="text-main-600 mb-0 ">
-                      About Navneeta Education Trust
+                      About Navaneetha  Education Trust
                     </h5>
                   </div>
                   <h2 className="mb-24 wow bounceIn">
                     The Place Where You Can Achieve
                   </h2>
                   <p className="text-neutral-500 text-line-2 wow bounceInUp">
-                    Welcome to Navneeta Education Trust, where learning knows no
+                    Welcome to Navaneetha  Education Trust, where learning knows no
                     bounds. Whether you're a student, professional, or lifelong
                     learner...
                   </p>

@@ -11,7 +11,7 @@ const FooterFive = () => {
               <img src="assets/images/logo/logo.png" alt="" className="mb-24" />
               <div>
                 <p className="text-neutral-700 text-14 fw-normal mb-24 max-w-240-px">
-                  Navneeta Education Trust exceeded all my expectations! The
+                  Navaneetha  Education Trust exceeded all my expectations! The
                   instructors were not only experts.
                 </p>
                 <ul className="d-flex align-items-center gap-12">
@@ -226,7 +226,7 @@ const FooterFive = () => {
       <div className="container max-w-1536-px position-relative z-2">
         <div className="py-32 border-top border-white">
           <p className="text-16 fw-semibold text-neutral-700 text-center">
-            Copyright ©2025 Navneeta Education Trust. Designed By Wowtheme7
+            Copyright ©2025 Navaneetha  Education Trust. Designed By Wowtheme7
           </p>
         </div>
       </div>

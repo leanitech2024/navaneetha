@@ -14,9 +14,9 @@
 // import Animation from "@/helper/Animation";
 
 // export const metadata = {
-//   title: "Navneeta Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template",
+//   title: "Navaneetha  Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template",
 //   description:
-//     "Navneeta Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navneeta Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
+//     "Navaneetha  Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navaneetha  Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
 // };
 
 // const page = () => {
@@ -87,9 +87,9 @@ import Animation from "@/helper/Animation";
 
 export const metadata = {
   title:
-    "Navneeta Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template",
+    "Navaneetha  Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template",
   description:
-    "Navneeta Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navneeta Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
+    "Navaneetha  Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navaneetha  Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
 };
 
 const page = () => {
