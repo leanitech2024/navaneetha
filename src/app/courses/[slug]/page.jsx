@@ -1,7 +1,37 @@
-'use client';
+import Breadcrumb from '@/components/Breadcrumb';
+// import ServiceDetails from '@/components/ServiceDetails';
+import { courses } from '@/constants';
+import Animation from '@/helper/Animation';
+import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
-const ServiceDetails = ({ title, description, image, features, children }) => {
+export default async function CoursePage({ params, searchParams }) {
+  const slug = await params.slug;
+
+  const course = courses.find((c) => c.slug === slug);
+
+  if (!course) {
+    return notFound();
+  }
+
+  return (
+    <main className={'overflow-hidden'}>
+      {/* <HeaderOne /> */}
+      <Breadcrumb title={course.title} />
+      <CourseDetails
+        title={course.title}
+        description={course.description}
+        image={course.image}
+        features={course.features}
+      />
+      {/* <FooterOne /> */}
+      <Animation />
+    </main>
+  );
+}
+
+function CourseDetails({ title, description, image, features, children }) {
   return (
     <section className='course-details py-120'>
       <div className='container'>
@@ -11,10 +41,12 @@ const ServiceDetails = ({ title, description, image, features, children }) => {
             <div className='course-details__content border border-neutral-30 rounded-12 bg-main-25 p-12'>
               <div className='position-relative text-center'>
                 {image && (
-                  <img
-                    src={'assets/images/all/ms-ramaiha.jpg'}
+                  <Image
+                    src={image}
                     alt={title}
                     className='rounded-8 cover-img'
+                    width={800}
+                    height={400}
                   />
                 )}
               </div>
@@ -164,11 +196,19 @@ const ServiceDetails = ({ title, description, image, features, children }) => {
               <h4 className='mb-24'>Get Expert Guidance</h4>
               <div className='flex-column gap-16 d-flex'>
                 <Link
+                  prefetch={true}
+                  href='/'
+                  className='btn btn-main rounded-pill w-100 flex-center gap-8'>
+                  Go Back <i className='ph-bold ph-arrow-arc-left' />
+                </Link>
+                <Link
+                  prefetch={true}
                   href='/contact'
                   className='btn btn-main rounded-pill w-100 flex-center gap-8'>
                   Apply Now <i className='ph-bold ph-arrow-right' />
                 </Link>
                 <Link
+                  prefetch={true}
                   href='/contact'
                   className='btn btn-outline-main rounded-pill w-100 flex-center gap-8'>
                   Contact Us <i className='ph-bold ph-phone' />
@@ -198,6 +238,4 @@ const ServiceDetails = ({ title, description, image, features, children }) => {
       </div>
     </section>
   );
-};
-
-export default ServiceDetails;
+}

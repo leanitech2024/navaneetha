@@ -1,17 +1,17 @@
-"use client";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import $ from "jquery";
-import { usePathname } from "next/navigation";
+'use client';
+import $ from 'jquery';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const HeaderOne = () => {
   let pathname = usePathname();
   const [scroll, setScroll] = useState(false);
   const [isMenuActive, setIsMenuActive] = useState(false);
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("select2").then(() => {
-        const selectElement = $(".js-example-basic-single");
+    if (typeof window !== 'undefined') {
+      import('select2').then(() => {
+        const selectElement = $('.js-example-basic-single');
         if (selectElement.length > 0) {
           selectElement.select2(); // Initialize Select2
         }
@@ -31,26 +31,26 @@ const HeaderOne = () => {
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
     if (!isMenuActive) {
-      document.body.classList.add("scroll-hide-sm");
+      document.body.classList.add('scroll-hide-sm');
     } else {
-      document.body.classList.remove("scroll-hide-sm");
+      document.body.classList.remove('scroll-hide-sm');
     }
   };
 
   const closeMenu = () => {
     setIsMenuActive(false);
-    document.body.classList.remove("scroll-hide-sm");
+    document.body.classList.remove('scroll-hide-sm');
   };
 
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0,
+    typeof window !== 'undefined' ? window.innerWidth : 0,
   );
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleSubmenuClick = (index) => {
@@ -61,8 +61,8 @@ const HeaderOne = () => {
 
   const menuItems = [
     {
-      label: "Home",
-      href: "/",
+      label: 'Home',
+      href: '/',
       // links: [
       //   { href: "/", label: "Home LMS" },
       //   { href: "/index-2", label: "Home Online Course" },
@@ -73,16 +73,20 @@ const HeaderOne = () => {
       // ],
     },
     {
-      label: "About Us",
-      href: "/about",
+      label: 'About Us',
+      href: '/about',
     },
     {
-      label: "Services",
-      href: "/course",
+      label: 'Courses',
+      href: '/courses',
     },
     {
-      label: "Contact",
-      href: "/contact",
+      label: 'Services',
+      href: '/services',
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
     },
     // {
     //   label: "Courses",
@@ -137,15 +141,19 @@ const HeaderOne = () => {
 
   return (
     <>
-      <div className={`side-overlay ${isMenuActive ? "show" : ""}`}></div>
-      <header className={`header ${scroll ? "fixed-header" : ""}`}>
-        <div className="container container--xl">
-          <nav className="header-inner flex-between gap-8">
-            <div className="header-content-wrapper flex-align">
+      <div className={`side-overlay ${isMenuActive ? 'show' : ''}`}></div>
+      <header className={`header ${scroll ? 'fixed-header' : ''}`}>
+        <div className='container container--xl'>
+          <nav className='header-inner flex-between gap-8'>
+            <div className='header-content-wrapper flex-align'>
               {/* Logo Start */}
-              <div className="logo">
-                <Link href="/" className="link">
-                  <img src="assets/images/logo/logo.png" alt="Logo" />
+              <div className='logo'>
+                <Link href='/' className='link'>
+                  <img
+                    src='assets/images/logo/logo.png'
+                    alt='Logo'
+                    style={{ width: '100%', height: '75px' }}
+                  />
                 </Link>
               </div>
               {/* Logo End  */}
@@ -179,15 +187,14 @@ const HeaderOne = () => {
             </div>
 
             {/* Menu Start  */}
-            <div className="header-menu d-lg-block d-none">
-              <ul className="nav-menu flex-align">
+            <div className='header-menu d-lg-block d-none'>
+              <ul className='nav-menu flex-align'>
                 {menuItems.map((item, index) =>
                   item.links ? (
                     <li
                       key={`menu-item-${index}`}
-                      className="nav-menu__item has-submenu"
-                    >
-                      <Link href="#" className="nav-menu__link">
+                      className='nav-menu__item has-submenu'>
+                      <Link href='#' className='nav-menu__link'>
                         {item.label}
                       </Link>
                       <ul className={`nav-submenu scroll-sm`}>
@@ -195,13 +202,11 @@ const HeaderOne = () => {
                           <li
                             key={`submenu-item-${linkIndex}`}
                             className={`nav-submenu__item ${
-                              pathname == link.href && "activePage"
-                            }`}
-                          >
+                              pathname == link.href && 'activePage'
+                            }`}>
                             <Link
                               href={link.href}
-                              className="nav-submenu__link hover-bg-neutral-30"
-                            >
+                              className='nav-submenu__link hover-bg-neutral-30'>
                               {link.label}
                             </Link>
                           </li>
@@ -212,10 +217,9 @@ const HeaderOne = () => {
                     <li
                       key={`menu-contact-${index}`}
                       className={`nav-menu__item ${
-                        pathname == item.href && "activePage"
-                      }`}
-                    >
-                      <Link href={item.href} className="nav-menu__link">
+                        pathname == item.href && 'activePage'
+                      }`}>
+                      <Link href={item.href} className='nav-menu__link'>
                         {item.label}
                       </Link>
                     </li>
@@ -226,7 +230,7 @@ const HeaderOne = () => {
             {/* Menu End  */}
 
             {/* Header Right start */}
-            <div className="header-right flex-align">
+            <div className='header-right flex-align'>
               {/* <form
                 action='#'
                 className='search-form position-relative d-xl-block d-none'
@@ -249,15 +253,15 @@ const HeaderOne = () => {
               >
                 <i className='ph ph-user-circle' />
               </Link> */}
-              <Link href="/contact" className="btn btn-main rounded-pill">
+              <Link href='/contact' className='btn btn-main rounded-pill'>
                 Get Started
               </Link>
               <button
-                type="button"
-                className="toggle-mobileMenu d-lg-none text-neutral-200 flex-center"
-                onClick={toggleMenu}
-              >
-                <i className="ph ph-list" />
+                title={'Menu'}
+                type='button'
+                className='toggle-mobileMenu d-lg-none text-neutral-200 flex-center'
+                onClick={toggleMenu}>
+                <i className='ph ph-list' />
               </button>
             </div>
             {/* Header Right End  */}
@@ -267,37 +271,34 @@ const HeaderOne = () => {
 
       <div
         className={`mobile-menu scroll-sm d-lg-none d-block ${
-          isMenuActive ? "active" : ""
-        }`}
-      >
-        <button type="button" className="close-button" onClick={closeMenu}>
-          <i className="ph ph-x" />{" "}
+          isMenuActive ? 'active' : ''
+        }`}>
+        <button type='button' className='close-button' onClick={closeMenu}>
+          <i className='ph ph-x' />{' '}
         </button>
-        <div className="mobile-menu__inner">
-          <Link href="/" className="mobile-menu__logo">
-            <img src="assets/images/logo/logo.png" alt="Logo" />
+        <div className='mobile-menu__inner'>
+          <Link href='/' className='mobile-menu__logo'>
+            <img src='assets/images/logo/logo.png' alt='Logo' />
           </Link>
-          <div className="mobile-menu__menu">
-            <ul className="nav-menu flex-align nav-menu--mobile">
+          <div className='mobile-menu__menu'>
+            <ul className='nav-menu flex-align nav-menu--mobile'>
               {menuItems.map((item, index) =>
                 item.links ? (
                   <li
                     key={`menu-item-${index}`}
                     className={`nav-menu__item has-submenu ${
-                      activeSubmenu === index ? "activePage" : ""
+                      activeSubmenu === index ? 'activePage' : ''
                     }`}
-                    onClick={() => handleSubmenuClick(index)}
-                  >
-                    <Link href="#" className="nav-menu__link">
+                    onClick={() => handleSubmenuClick(index)}>
+                    <Link href='#' className='nav-menu__link'>
                       {item.label}
                     </Link>
                     <ul className={`nav-submenu scroll-sm`}>
                       {item.links.map((link, linkIndex) => (
-                        <li key={linkIndex} className="nav-submenu__item">
+                        <li key={linkIndex} className='nav-submenu__item'>
                           <Link
                             href={link.href}
-                            className="nav-submenu__link hover-bg-neutral-30"
-                          >
+                            className='nav-submenu__link hover-bg-neutral-30'>
                             {link.label}
                           </Link>
                         </li>
@@ -307,18 +308,17 @@ const HeaderOne = () => {
                 ) : (
                   <li
                     className={`nav-menu__item ${
-                      pathname == item.href && "activePage"
+                      pathname == item.href && 'activePage'
                     }`}
-                    key={index}
-                  >
-                    <Link href={item.href} className="nav-menu__link">
+                    key={index}>
+                    <Link href={item.href} className='nav-menu__link'>
                       {item.label}
                     </Link>
                   </li>
                 ),
               )}
             </ul>
-            <div className="d-sm-none d-block mt-24">
+            <div className='d-sm-none d-block mt-24'>
               {/* <div className='header-select border border-neutral-30 bg-main-25 rounded-pill position-relative'>
                 <span className='select-icon position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex'>
                   <i className='ph-bold ph-squares-four' />

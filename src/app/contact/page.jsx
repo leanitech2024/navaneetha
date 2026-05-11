@@ -1,28 +1,28 @@
-import Breadcrumb from "@/components/Breadcrumb";
-import CertificateOne from "@/components/CertificateOne";
-import ContactInner from "@/components/ContactInner";
-import FooterOne from "@/components/FooterOne";
-import HeaderOne from "@/components/HeaderOne";
-import Animation from "@/helper/Animation";
+import Breadcrumb from '@/components/Breadcrumb';
+import CertificateOne from '@/components/CertificateOne';
+import ContactInner from '@/components/ContactInner';
+// import FooterOne from '@/components/FooterOne';
+// import HeaderOne from "@/components/HeaderOne";
+import Animation from '@/helper/Animation';
 
 export const metadata = {
   title:
-    "Navaneetha  Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template",
+    'Navaneetha  Education Trust - LMS, Tutors, Education & Online Course NEXT JS Template',
   description:
-    "Navaneetha  Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navaneetha  Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.",
+    'Navaneetha  Education Trust is a comprehensive and modern NEXT JS template designed for online education platforms, learning management systems (LMS), tutors, educational institutions, and online courses. It’s the perfect solution for creating an engaging and interactive online learning experience for students, educators, and institutions. Whether you’re offering online courses, running a tutoring platform, or managing an educational website, Navaneetha  Education Trust provides the tools to help you succeed. This template is tailored to meet the needs of educators, administrators, and students, providing a seamless and engaging user experience.',
 };
 
 const page = () => {
   return (
-    <>
+    <main className={'overflow-hidden'}>
       {/* Animation */}
       <Animation />
 
       {/* HeaderTwo */}
-      <HeaderOne />
+      {/* <HeaderOne /> */}
 
       {/* Breadcrumb */}
-      <Breadcrumb title={"Contact"} />
+      <Breadcrumb title={'Contact'} />
 
       {/* ContactInner */}
       <ContactInner />
@@ -31,8 +31,8 @@ const page = () => {
       <CertificateOne />
 
       {/* FooterOne */}
-      <FooterOne />
-    </>
+      {/* <FooterOne /> */}
+    </main>
   );
 };
 
