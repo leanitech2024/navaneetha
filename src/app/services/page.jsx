@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 // import CourseGridView from '@/components/CourseGridView';
 import Animation from '@/helper/Animation';
+import Image from 'next/image';
+import SupportSlider from './_components/SupportSlider';
 
 export default function Services() {
   return (
@@ -59,7 +61,7 @@ export function SupportSection() {
       <div className='position-relative'>
         <div className='container'>
           <div className='row align-items-center gy-4'>
-            <div className='col-lg-6 pe-lg-5'>
+            <div className='col-xl-6 pe-xl-5'>
               {supportFeatures.map((feature, index) => (
                 <div
                   className='certificate-two-item animation-item border-bottom border-neutral-50 border-dashed border-0 mb-28 pb-28'
@@ -145,8 +147,8 @@ export function SupportSection() {
                 </p>
               </div>
             </div> */}
-            <div className='col-lg-6'>
-              <div className='certificate-two__thumb'>
+            <div className='col-xl-6'>
+              {/* <div className='certificate-two__thumb'>
                 <img
                   src='assets/images/thumbs/certificate-two-img.png'
                   alt=''
@@ -156,7 +158,8 @@ export function SupportSection() {
                   data-tilt-perspective={5000}
                   data-tilt-full-page-listening=''
                 />
-              </div>
+              </div> */}
+              <SupportSlider />
             </div>
           </div>
         </div>
@@ -173,11 +176,13 @@ const services = [
       'We help students to understand their strength',
       'Choose suitable courses',
     ],
+    cover: '/services/services-1.png',
   },
   {
     id: crypto.randomUUID(),
     title: 'Test preparation Advice',
     features: ['We guide students on exams like NEET, CET, IELTS, TOFEL, CLAT'],
+    cover: '/services/services-2.png',
   },
   {
     id: crypto.randomUUID(),
@@ -185,11 +190,13 @@ const services = [
     features: [
       'Help with country selection, visa, Scholarships, travelling and accommodation',
     ],
+    cover: '/services/services-5.png',
   },
   {
     id: crypto.randomUUID(),
     title: 'Test preparation Advice',
     features: ['We guide students on exams like NEET, CET, IELTS, TOFEL, CLAT'],
+    cover: '/services/services-9.png',
   },
   {
     id: crypto.randomUUID(),
@@ -197,6 +204,7 @@ const services = [
     features: [
       'Help with country selection, visa, Scholarships,travelling and accommodation',
     ],
+    cover: '/services/services-5.png',
   },
   {
     id: crypto.randomUUID(),
@@ -205,6 +213,7 @@ const services = [
       'We assist them end to end service for NEET candidates or engineering students from application, registration, document verification, optional entries, payment link, support and challan.',
       'We support for reposting paper for both local and abroad.',
     ],
+    cover: '/services/services-6.png',
   },
   {
     id: crypto.randomUUID(),
@@ -212,11 +221,13 @@ const services = [
     features: [
       'We recommend courses, certifications and extra curricular activities.',
     ],
+    cover: '/services/services-7.png',
   },
   {
     id: crypto.randomUUID(),
     title: 'Education loan',
     features: ['We can give complete guidance and support on Education Loan.'],
+    cover: '/services/services-8.png',
   },
 ];
 
@@ -260,11 +271,13 @@ export function ServicesCard() {
             <div className='col-lg-4 col-sm-6' key={service.id}>
               <div className='course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30'>
                 <div className='course-item__thumb rounded-12 overflow-hidden position-relative'>
-                  <Link href='#' className='w-100 h-100'>
-                    <img
-                      src='assets/images/thumbs/course-img1.png'
-                      alt='Course Image'
+                  <Link href='#' className='w-100 h-100 ratio ratio-16x9'>
+                    <Image
+                      src={service.cover}
+                      alt={service.title}
                       className='course-item__img rounded-12 cover-img transition-2'
+                      width={1536}
+                      height={1024}
                     />
                   </Link>
                   {/* <div className='flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1'>

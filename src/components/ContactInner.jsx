@@ -1,3 +1,5 @@
+import { testimonials } from '@/constants';
+
 const ContactInner = () => {
   return (
     <>
@@ -25,12 +27,12 @@ const ContactInner = () => {
                 <div className='flex-grow-1'>
                   <h4 className='mb-12'>Main Office</h4>
                   <p className='text-neutral-500'>
-                    2972 Westheimer Rd. Santa Ana, Illinois 85486{" "}
+                    #72, West of Chord Road, 2nd stage, Mahalakhsmipura,
+                    Bangalore-560086
                   </p>
                   <a
                     href='#'
-                    className='text-main-600 fw-semibold text-decoration-underline mt-16'
-                  >
+                    className='text-main-600 fw-semibold text-decoration-underline mt-16'>
                     Find Location
                   </a>
                 </div>
@@ -43,12 +45,15 @@ const ContactInner = () => {
                 </span>
                 <div className='flex-grow-1'>
                   <h4 className='mb-12'>Email Address</h4>
-                  <p className='text-neutral-500'>infoexample@gmail.com</p>
-                  <p className='text-neutral-500'>example@gmail.com</p>
+                  <p className='text-neutral-500'>
+                    <a href='mailto:navaneethaeducationtrust@gmail.com'>
+                      navaneethaeducationtrust@gmail.com
+                    </a>
+                  </p>
+                  <p className='text-neutral-500'>&nbsp;</p>
                   <a
                     href='mailto:infoexample@gmail.com'
-                    className='text-main-600 fw-semibold text-decoration-underline mt-16'
-                  >
+                    className='text-main-600 fw-semibold text-decoration-underline mt-16'>
                     Get In Touch
                   </a>
                 </div>
@@ -61,12 +66,16 @@ const ContactInner = () => {
                 </span>
                 <div className='flex-grow-1'>
                   <h4 className='mb-12'>Phone Number</h4>
-                  <p className='text-neutral-500'>(505) 555-0125</p>
-                  <p className='text-neutral-500'>(406) 555-0120</p>
+                  <p className='text-neutral-500'>
+                    <a href='tel:+919980030616'>+91 9980030616</a>
+                  </p>
+                  <p className='text-neutral-500'>
+                    <a href='tel:+919844066230'>+91 9844066230</a>
+                  </p>
+                  <p className='text-neutral-500'>&nbsp;</p>
                   <a
                     href='tel:(406)555-0120'
-                    className='text-main-600 fw-semibold text-decoration-underline mt-16'
-                  >
+                    className='text-main-600 fw-semibold text-decoration-underline mt-16'>
                     Contact Us Today!
                   </a>
                 </div>
@@ -103,36 +112,14 @@ const ContactInner = () => {
               </div>
               <div className='flex-align gap-40 flex-wrap'>
                 <div className='enrolled-students mt-12 d-block'>
-                  <img
-                    src='assets/images/thumbs/enroll-student-img1.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
-                  <img
-                    src='assets/images/thumbs/enroll-student-img2.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
-                  <img
-                    src='assets/images/thumbs/enroll-student-img3.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
-                  <img
-                    src='assets/images/thumbs/enroll-student-img4.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
-                  <img
-                    src='assets/images/thumbs/enroll-student-img5.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
-                  <img
-                    src='assets/images/thumbs/enroll-student-img6.png'
-                    alt=''
-                    className='w-48 h-48 rounded-circle object-fit-cover transition-2'
-                  />
+                  {testimonials.slice(2, 8).map((testimonial) => (
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className='w-48 h-48 rounded-circle object-fit-cover transition-2'
+                      key={testimonial.id}
+                    />
+                  ))}
                 </div>
                 <div className=''>
                   <ul className='flex-align gap-4 mb-10'>
@@ -153,12 +140,14 @@ const ContactInner = () => {
                     </li>
                   </ul>
                   <span className='text-neutral-700 fw-medium'>
-                    {" "}
+                    {' '}
                     2.5k+ reviews (4.95 of 5)
                   </span>
                 </div>
               </div>
             </div>
+
+            {/* form */}
             <div className='col-xl-5 col-lg-6'>
               <div className='p-24 bg-white rounded-12 box-shadow-md'>
                 <div className='border border-neutral-30 rounded-8 bg-main-25 p-24'>
@@ -168,64 +157,63 @@ const ContactInner = () => {
                     <div className='mb-24'>
                       <label
                         htmlFor='name'
-                        className='text-neutral-700 text-lg fw-medium mb-12'
-                      >
-                        Name{" "}
+                        className='text-neutral-700 text-lg fw-medium mb-12'>
+                        Name{' '}
                       </label>
                       <input
                         type='text'
                         className='common-input rounded-pill border-transparent focus-border-main-600'
                         id='name'
                         placeholder='Enter Name...'
+                        style={{ maxWidth: '100% !important' }}
                       />
                     </div>
                     <div className='mb-24'>
                       <label
                         htmlFor='email'
-                        className='text-neutral-700 text-lg fw-medium mb-12'
-                      >
-                        Email{" "}
+                        className='text-neutral-700 text-lg fw-medium mb-12'>
+                        Email{' '}
                       </label>
                       <input
                         type='email'
                         className='common-input rounded-pill border-transparent focus-border-main-600'
                         id='email'
                         placeholder='Enter Email...'
+                        style={{ maxWidth: '100% !important' }}
                       />
                     </div>
                     <div className='mb-24'>
                       <label
                         htmlFor='phone'
-                        className='text-neutral-700 text-lg fw-medium mb-12'
-                      >
-                        Phone{" "}
+                        className='text-neutral-700 text-lg fw-medium mb-12'>
+                        Phone{' '}
                       </label>
                       <input
                         type='tel'
                         className='common-input rounded-pill border-transparent focus-border-main-600'
                         id='phone'
                         placeholder='Enter Your Number...'
+                        style={{ maxWidth: '100% !important' }}
                       />
                     </div>
                     <div className='mb-24'>
                       <label
                         htmlFor='desc'
-                        className='text-neutral-700 text-lg fw-medium mb-12'
-                      >
+                        className='text-neutral-700 text-lg fw-medium mb-12'>
                         Message
                       </label>
                       <textarea
                         id='desc'
                         className='common-input rounded-24 border-transparent focus-border-main-600 h-110'
                         placeholder='Enter Your Message...'
-                        defaultValue={""}
+                        defaultValue={''}
+                        style={{ maxWidth: '100% !important' }}
                       />
                     </div>
                     <div className='mb-0'>
                       <button
                         type='submit'
-                        className='btn btn-main rounded-pill flex-center gap-8 mt-40'
-                      >
+                        className='btn btn-main rounded-pill flex-center gap-8 mt-40'>
                         Send Message
                         <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
                       </button>

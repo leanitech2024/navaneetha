@@ -4,19 +4,21 @@ import { testimonials } from '@/constants';
 import { useRef } from 'react';
 import Slider from 'react-slick';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const TestimonialsThree = () => {
   const sliderRef = useRef(null);
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: !isDev,
     autoplaySpeed: 2000,
     speed: 900,
     dots: false,
     pauseOnHover: true,
     arrows: false,
     infinite: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: '0px',
     loop: true,
     draggable: true,
@@ -64,7 +66,7 @@ const TestimonialsThree = () => {
               ref={sliderRef}
               {...settings}
               className='testimonials-three-slider'>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   className='testimonials-three-item bg-white p-24 rounded-12 box-shadow-md'
                   key={testimonial.id}>
@@ -264,6 +266,7 @@ const TestimonialsThree = () => {
             </p>
             <div className='flex-align gap-16 mt-40'>
               <button
+                title={'prev'}
                 type='button'
                 id='testimonials-three-prev'
                 onClick={() => sliderRef.current.slickPrev()}
@@ -271,6 +274,7 @@ const TestimonialsThree = () => {
                 <i className='ph ph-caret-left' />
               </button>
               <button
+                title={'next'}
                 type='button'
                 id='testimonials-three-next'
                 onClick={() => sliderRef.current.slickNext()}

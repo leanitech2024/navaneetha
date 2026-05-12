@@ -1,8 +1,16 @@
-"use client";
-import { useState } from "react";
-import ModalVideo from "react-modal-video";
+// import { useState } from 'react';
+// import ModalVideo from 'react-modal-video';
+
+// import { createPlayer, videoFeatures } from '@videojs/react';
+// import { Video, VideoSkin } from '@videojs/react/video';
+
+// import '@videojs/react/video/minimal-skin.css';
+import { LazyVideoPlayer } from './video-js-example/lazy';
+
+// const Player = createPlayer({ features: videoFeatures });
+
 const VideoOne = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   return (
     <section className='video pt-120'>
       <div className='container'>
@@ -20,10 +28,10 @@ const VideoOne = () => {
           </p>
         </div>
       </div>
-      <div className='video-img position-relative half-bg'>
+      {/* <div className='video-img position-relative half-bg'>
         <div className='container wow bounceIn'>
           <img
-            src='assets/images/thumbs/video-img.png'
+            src='/services/services-12.png'
             className='rounded-12 cover-img'
             alt=''
             data-tilt=''
@@ -34,20 +42,29 @@ const VideoOne = () => {
           />
           <span
             onClick={() => setIsOpen(true)}
-            className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'
-          >
+            className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'>
             <i className='ph-fill ph-play' />
           </span>
         </div>
+      </div> */}
+
+      <div className='video-img position-relative half-bg'>
+        <div className='container wow bounceIn'>
+          <LazyVideoPlayer
+            src={'/videos/counselling.mp4'}
+            poster={'/services/services-12.png'}
+          />
+        </div>
       </div>
-      <ModalVideo
+
+      {/* <ModalVideo
         channel='youtube'
         autoplay
         isOpen={isOpen}
         videoId='XxVg_s8xAms'
         onClose={() => setIsOpen(false)}
         allowFullScreen
-      />
+      /> */}
     </section>
   );
 };
