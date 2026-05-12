@@ -1,10 +1,11 @@
-"use client";
-import { useState } from "react";
-import ModalVideo from "react-modal-video";
+// import { useState } from 'react';
+// import ModalVideo from 'react-modal-video';
+import { LazyVideoPlayer } from './video-js-example/lazy';
+
 const VideoOneV2 = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className='video '>
+    <section className='video py-120'>
       <div className='container'>
         <div className='section-heading text-center'>
           <div className='flex-align d-inline-flex gap-8 mb-16'>
@@ -20,7 +21,17 @@ const VideoOneV2 = () => {
           </p>
         </div>
       </div>
+
       <div className='video-img position-relative half-bg'>
+        <div className='container wow bounceIn'>
+          <LazyVideoPlayer
+            src={'/videos/counselling.mp4'}
+            poster={'/services/services-12.png'}
+          />
+        </div>
+      </div>
+
+      {/* <div className='video-img position-relative half-bg'>
         <div className='container wow bounceIn'>
           <img
             src='assets/images/thumbs/video-img.png'
@@ -34,20 +45,19 @@ const VideoOneV2 = () => {
           />
           <span
             onClick={() => setIsOpen(true)}
-            className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'
-          >
+            className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'>
             <i className='ph-fill ph-play' />
           </span>
         </div>
-      </div>
-      <ModalVideo
+      </div> */}
+      {/* <ModalVideo
         channel='youtube'
         autoplay
         isOpen={isOpen}
         videoId='XxVg_s8xAms'
         onClose={() => setIsOpen(false)}
         allowFullScreen
-      />
+      /> */}
     </section>
   );
 };

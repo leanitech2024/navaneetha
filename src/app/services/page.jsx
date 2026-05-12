@@ -36,12 +36,12 @@ const supportFeatures = [
   },
   {
     id: crypto.randomUUID(),
-    item: 'We create online content (Youtube / Instagram)',
+    item: 'End to End support from choosing a course until the Admission Done',
     iconClass: 'ph-film-strip',
   },
   {
     id: crypto.randomUUID(),
-    item: 'We provide end-end support from choosing a course to settling Abroad.',
+    item: 'Study Abroad programme end to end support and Guidance given',
     iconClass: 'ph-headset',
   },
 ];
@@ -78,10 +78,10 @@ export function SupportSection() {
                     </span>
                     <h5 className='mb-0'>{feature.item}</h5>
                   </div>
-                  <p className='text-neutral-700 text-line-2'>
+                  {/* <p className='text-neutral-700 text-line-2'>
                     Lorem ipsum dolor sit amet, conse ctetur adipisc amus ac
                     iaculis arcu.
-                  </p>
+                  </p> */}
                 </div>
               ))}
             </div>
@@ -184,14 +184,14 @@ const services = [
     features: ['We guide students on exams like NEET, CET, IELTS, TOFEL, CLAT'],
     cover: '/services/services-2.png',
   },
-  {
-    id: crypto.randomUUID(),
-    title: 'Study Abroad consulting',
-    features: [
-      'Help with country selection, visa, Scholarships, travelling and accommodation',
-    ],
-    cover: '/services/services-5.png',
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: 'Study Abroad consulting',
+  //   features: [
+  //     'Help with country selection, visa, Scholarships, travelling and accommodation',
+  //   ],
+  //   cover: '/services/services-5.png',
+  // },
   {
     id: crypto.randomUUID(),
     title: 'Test preparation Advice',

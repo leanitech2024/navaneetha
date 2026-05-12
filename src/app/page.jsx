@@ -72,9 +72,9 @@
 import AboutThree from '@/components/AboutThree';
 import BannerThree from '@/components/BannerThree';
 import BlogTwo from '@/components/BlogTwo';
-import BrandTwo from '@/components/BrandTwo';
+// import BrandTwo from '@/components/BrandTwo';
 import ChooseUsTwo from '@/components/ChooseUsTwo';
-import CounterTwo from '@/components/CounterTwo';
+// import CounterTwo from '@/components/CounterTwo';
 import EventOne from '@/components/EventOne';
 import FacultyOne from '@/components/FacultyOne';
 // import FooterThree from "@/components/FooterThree";
@@ -117,7 +117,7 @@ const page = () => {
       <VideoOne />
 
       {/* CounterTwo */}
-      <CounterTwo />
+      {/* <CounterTwo /> */}
 
       {/* FacultyOne */}
       <FacultyOne />
@@ -135,7 +135,7 @@ const page = () => {
       <BlogTwo />
 
       {/* BrandTwo */}
-      <BrandTwo />
+      {/* <BrandTwo /> */}
 
       {/* FooterThree */}
       {/* <FooterThree /> */}

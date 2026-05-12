@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const FacultyOne = () => {
   return (
-    <section className='faculty pb-120 bg-main-25'>
+    <section className='faculty py-120 bg-main-25'>
       <div className='container'>
         {/* Section Heading */}
         <div className='section-heading text-center'>

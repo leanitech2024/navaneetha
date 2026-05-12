@@ -1,3 +1,4 @@
+import ContactForm from '@/app/contact/_components/ContactForm';
 import { testimonials } from '@/constants';
 
 const ContactInner = () => {
@@ -151,7 +152,7 @@ const ContactInner = () => {
             <div className='col-xl-5 col-lg-6'>
               <div className='p-24 bg-white rounded-12 box-shadow-md'>
                 <div className='border border-neutral-30 rounded-8 bg-main-25 p-24'>
-                  <form action='#' id='commentForm'>
+                  {/* <form action='#' id='commentForm'>
                     <h4 className='mb-0'>Get In Touch</h4>
                     <span className='d-block border border-neutral-30 my-24 border-dashed' />
                     <div className='mb-24'>
@@ -218,7 +219,8 @@ const ContactInner = () => {
                         <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
                       </button>
                     </div>
-                  </form>
+                  </form> */}
+                  <ContactForm />
                 </div>
               </div>
             </div>

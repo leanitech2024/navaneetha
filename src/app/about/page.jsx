@@ -1,7 +1,7 @@
 import AboutThreeWhiteBG from '@/components/AboutThreeWhiteBG';
-import BrandTwo from '@/components/BrandTwo';
+// import BrandTwo from '@/components/BrandTwo';
 import Breadcrumb from '@/components/Breadcrumb';
-import CounterOne from '@/components/CounterOne';
+// import CounterOne from '@/components/CounterOne';
 // import FooterThree from '@/components/FooterThree';
 // import HeaderOne from "@/components/HeaderOne";
 import TestimonialsThree from '@/components/TestimonialsThree';
@@ -31,10 +31,10 @@ const page = () => {
       <AboutThreeWhiteBG />
 
       {/* CounterOne */}
-      <CounterOne />
+      {/* <CounterOne /> */}
 
       {/* BrandTwo */}
-      <BrandTwo />
+      {/* <BrandTwo /> */}
 
       {/* VideoOneV2 */}
       <VideoOneV2 />
