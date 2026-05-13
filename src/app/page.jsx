@@ -71,12 +71,12 @@
 
 import AboutThree from '@/components/AboutThree';
 import BannerThree from '@/components/BannerThree';
-import BlogTwo from '@/components/BlogTwo';
 // import BrandTwo from '@/components/BrandTwo';
 import ChooseUsTwo from '@/components/ChooseUsTwo';
 // import CounterTwo from '@/components/CounterTwo';
 import EventOne from '@/components/EventOne';
 import FacultyOne from '@/components/FacultyOne';
+import HomeBlogs from '@/components/HomeBlogs';
 // import FooterThree from "@/components/FooterThree";
 // import HeaderOne from "@/components/HeaderOne";
 import InfoTwo from '@/components/InfoTwo';
@@ -132,7 +132,7 @@ const page = () => {
       <EventOne />
 
       {/* BlogTwo */}
-      <BlogTwo />
+      <HomeBlogs />
 
       {/* BrandTwo */}
       {/* <BrandTwo /> */}

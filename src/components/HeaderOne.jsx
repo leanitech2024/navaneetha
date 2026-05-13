@@ -85,6 +85,10 @@ const HeaderOne = () => {
       href: '/services',
     },
     {
+      label: 'Blogs',
+      href: '/blogs',
+    },
+    {
       label: 'Contact',
       href: '/contact',
     },
