@@ -49,6 +49,7 @@ export default function HomeBlogsCarousel({ posts }) {
       <Slider ref={sliderRef} {...settings} className='blog-two-slider'>
         {posts.map((post) => (
           <div
+            key={post.metadata.slug}
             className='scale-hover-item bg-white rounded-16 p-12 h-100'
             data-aos='fade-up'
             data-aos-duration={200}>

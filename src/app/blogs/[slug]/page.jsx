@@ -158,7 +158,6 @@ const BlogDetailsInner = async ({ post }) => {
                 </Fragment>
               ))}
 
-              <span className='d-block border border-neutral-30 my-24 border-dashed' />
               <Link
                 href='/blogs'
                 className='h6 mb-0 text-main-600 fw-semibold hover-text-decoration-underline'>

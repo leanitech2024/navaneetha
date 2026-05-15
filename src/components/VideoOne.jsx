@@ -15,17 +15,17 @@ const VideoOne = () => {
     <section className='video pt-120'>
       <div className='container'>
         <div className='section-heading text-center'>
-          <div className='flex-align d-inline-flex gap-8 mb-16'>
+          {/* <div className='flex-align d-inline-flex gap-8 mb-16'>
             <span className='text-main-600 text-2xl d-flex'>
               <i className='ph-bold ph-book-open' />
             </span>
             <h5 className='text-main-600 mb-0'>Campus Life</h5>
-          </div>
-          <h2 className='mb-24 wow bounceIn'>Campus Highlights</h2>
-          <p className='wow bounceInDown'>
+          </div> */}
+          <h2 className='mb-24 wow bounceIn'>Highlights</h2>
+          {/* <p className='wow bounceInDown'>
             Welcome to our vibrant campus, where learning comes to life in a
             dynamic and inspiring environment.
-          </p>
+          </p> */}
         </div>
       </div>
       {/* <div className='video-img position-relative half-bg'>
@@ -53,6 +53,7 @@ const VideoOne = () => {
           <LazyVideoPlayer
             src={'/videos/counselling.mp4'}
             poster={'/services/services-12.png'}
+            isAspectRatio={true}
           />
         </div>
       </div>

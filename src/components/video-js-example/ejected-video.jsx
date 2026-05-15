@@ -53,13 +53,19 @@ export const Player = createPlayer({ features: videoFeatures });
  * />
  * ```
  */
-export function EjectedVideoPlayer({ src, className, poster, ...rest }) {
+export function EjectedVideoPlayer({
+  src,
+  className,
+  poster,
+  isAspectRatio = true,
+  ...rest
+}) {
   return (
     <Player.Provider>
       <Container
         className={`media-default-skin media-default-skin--video ${className ?? ''}`}
         {...rest}>
-        <Video src={src} playsInline />
+        <Video src={src} playsInline data-aspect={isAspectRatio} />
 
         {poster && (
           <Poster

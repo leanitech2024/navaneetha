@@ -6,6 +6,19 @@ import remarkGfm from 'remark-gfm';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+
+  // https://lh3.googleusercontent.com
+  // any subdomain of googleusercontent.com is allowed, as the image URLs can vary
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.googleusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 const withMDX = createMDX({

@@ -178,12 +178,12 @@ const services = [
     ],
     cover: '/services/services-1.png',
   },
-  {
-    id: crypto.randomUUID(),
-    title: 'Test preparation Advice',
-    features: ['We guide students on exams like NEET, CET, IELTS, TOFEL, CLAT'],
-    cover: '/services/services-2.png',
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: 'Test preparation Advice',
+  //   features: ['We guide students on exams like NEET, CET, IELTS, TOFEL, CLAT'],
+  //   cover: '/services/services-2.png',
+  // },
   // {
   //   id: crypto.randomUUID(),
   //   title: 'Study Abroad consulting',

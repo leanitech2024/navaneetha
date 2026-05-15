@@ -32,8 +32,8 @@ export default function SupportSlider() {
         </div>
         <div className={'ratio ratio-1x1'}>
           <Image
-            src={'/cert-2.png'}
-            alt={'cert-1'}
+            src={'/cert-3.png'}
+            alt={'cert-3'}
             width={500}
             height={500}
             data-tilt=''

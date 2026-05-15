@@ -1,6 +1,7 @@
 'use client';
 
 import { testimonials } from '@/constants';
+import Image from 'next/image';
 import { useRef } from 'react';
 import Slider from 'react-slick';
 
@@ -71,10 +72,12 @@ const TestimonialsThree = () => {
                   className='testimonials-three-item bg-white p-24 rounded-12 box-shadow-md'
                   key={testimonial.id}>
                   <div className='w-90 h-90 rounded-circle position-relative mb-4'>
-                    <img
+                    <Image
                       src={testimonial.image}
                       alt={testimonial.name}
                       className='cover-img rounded-circle'
+                      width={90}
+                      height={90}
                     />
                     <span className='w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute inset-block-end-0 inset-inline-end-0 mt--5 me--5'>
                       <img

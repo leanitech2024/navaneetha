@@ -1,9 +1,13 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
-import ModalVideo from "react-modal-video";
+'use client';
+
+import Link from 'next/link';
+// import { useState } from 'react';
+// import ModalVideo from 'react-modal-video';
+import { LazyVideoPlayer } from './video-js-example/lazy';
+
 const EventOne = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className='event py-120 overflow-hidden'>
       <div className='container'>
@@ -17,7 +21,7 @@ const EventOne = () => {
                 <h5 className='text-main-600 mb-0'>Upcoming Events</h5>
               </div>
               <h2 className='mb-24 wow bounceInRight'>
-                Join Our Upcoming Events{" "}
+                Join Our Upcoming Events{' '}
               </h2>
               <p className='text-neutral-500 text-line-4 wow bounceInUp'>
                 Join us for a variety of exciting events that cater to your
@@ -29,8 +33,7 @@ const EventOne = () => {
               <div
                 className='event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-24'
                 data-aos='fade-up-left'
-                data-aos-duration={200}
-              >
+                data-aos-duration={200}>
                 <div className=''>
                   <h3 className='mb-8 text-main-600'>25</h3>
                   <span className='text-neutral-500'>May, 2024</span>
@@ -61,8 +64,7 @@ const EventOne = () => {
                 <div className='flex-shrink-0'>
                   <Link
                     href='/about'
-                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'
-                  >
+                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'>
                     Join Now
                     <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
                   </Link>
@@ -71,8 +73,7 @@ const EventOne = () => {
               <div
                 className='event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-24'
                 data-aos='fade-up-left'
-                data-aos-duration={400}
-              >
+                data-aos-duration={400}>
                 <div className=''>
                   <h3 className='mb-8 text-main-600'>12</h3>
                   <span className='text-neutral-500'>Jun, 2024</span>
@@ -103,8 +104,7 @@ const EventOne = () => {
                 <div className='flex-shrink-0'>
                   <Link
                     href='/about'
-                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'
-                  >
+                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'>
                     Join Now
                     <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
                   </Link>
@@ -113,8 +113,7 @@ const EventOne = () => {
               <div
                 className='event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-0'
                 data-aos='fade-up-left'
-                data-aos-duration={500}
-              >
+                data-aos-duration={500}>
                 <div className=''>
                   <h3 className='mb-8 text-main-600'>29</h3>
                   <span className='text-neutral-500'>Jul, 2024</span>
@@ -145,8 +144,7 @@ const EventOne = () => {
                 <div className='flex-shrink-0'>
                   <Link
                     href='/about'
-                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'
-                  >
+                    className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8'>
                     Join Now
                     <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
                   </Link>
@@ -155,14 +153,23 @@ const EventOne = () => {
             </div>
             <Link
               href='/course'
-              className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8 mt-40'
-            >
+              className='btn btn-outline-main rounded-pill flex-align d-inline-flex gap-8 mt-40'>
               See All Events
               <i className='ph-bold ph-arrow-up-right d-flex text-lg' />
             </Link>
           </div>
           <div className='col-lg-4'>
             <div className='event-video rounded-16 overflow-hidden position-relative h-100 wow bounceIn'>
+              <div className='container wow bounceIn'>
+                <LazyVideoPlayer
+                  src={'/videos/highlights.mp4'}
+                  poster={'/services/services-12.png'}
+                  isAspectRatio={false}
+                />
+              </div>
+            </div>
+
+            {/* <div className='event-video rounded-16 overflow-hidden position-relative h-100 wow bounceIn'>
               <img
                 src='assets/images/thumbs/event-video-img.png'
                 className='rounded-16 cover-img'
@@ -176,22 +183,21 @@ const EventOne = () => {
               />
               <span
                 onClick={() => setIsOpen(true)}
-                className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'
-              >
+                className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'>
                 <i className='ph-fill ph-play' />
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <ModalVideo
+      {/* <ModalVideo
         channel='youtube'
         autoplay
         isOpen={isOpen}
         videoId='XxVg_s8xAms'
         onClose={() => setIsOpen(false)}
         allowFullScreen
-      />
+      /> */}
     </section>
   );
 };

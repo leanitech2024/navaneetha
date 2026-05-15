@@ -55,6 +55,13 @@ const FooterThree = () => {
                   </li>
                   <li className='mb-16'>
                     <Link
+                      href='/blogs'
+                      className='text-white hover-text-main-600 hover-text-decoration-underline'>
+                      Blogs
+                    </Link>
+                  </li>
+                  <li className='mb-16'>
+                    <Link
                       href='/contact'
                       className='text-white hover-text-main-600 hover-text-decoration-underline'>
                       Contact
@@ -203,12 +210,12 @@ const FooterThree = () => {
         <div className='bottom-footer border-top border-dashed border-neutral-600 border-0 py-32'>
           <div className='container container-two'>
             <div className='bottom-footer__inner flex-between gap-16 flex-wrap'>
-              <div className='footer-item__logo mb-0' data-aos='zoom-in-right'>
+              {/* <div className='footer-item__logo mb-0' data-aos='zoom-in-right'>
                 <Link href='/'>
                   {' '}
                   <img src='assets/images/logo/logo-white.png' alt='' />
                 </Link>
-              </div>
+              </div> */}
               <p
                 className='text-white text-line-1 fw-normal'
                 data-aos='zoom-in'>

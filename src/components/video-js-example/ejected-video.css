@@ -62,6 +62,19 @@
   }
 }
 
+/* data-aspect={isAspectRatio} */
+.media-default-skin {
+  /* Apply 16/9 if it has a video that DOES NOT have data-aspect="false" */
+  &:has(video:not([data-aspect='false'])) {
+    aspect-ratio: 16/9;
+  }
+
+  /* Alternatively, if you want to strictly check for data-aspect="true" */
+  &:has(video[data-aspect='true']) {
+    aspect-ratio: 16/9;
+  }
+}
+
 /* ==========================================================================
    Surface (shared glass effect for tooltips, popovers, controls)
    ========================================================================== */
