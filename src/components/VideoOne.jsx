@@ -53,7 +53,7 @@ const VideoOne = () => {
             <div className='px-2 px-md-5'>
               <LazyVideoPlayer
                 src={'/videos/NEET_06.mp4'}
-                poster={'/services/services-10.png'}
+                poster={'/services/neet-thumbnail.png'}
                 isAspectRatio={true}
               />
             </div>
