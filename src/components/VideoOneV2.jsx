@@ -1,5 +1,5 @@
-// import { useState } from 'react';
-// import ModalVideo from 'react-modal-video';
+'use client';
+
 import { LazyVideoPlayer } from './video-js-example/lazy';
 
 const VideoOneV2 = () => {

@@ -1,73 +1,84 @@
-// import { useState } from 'react';
-// import ModalVideo from 'react-modal-video';
+'use client';
 
-// import { createPlayer, videoFeatures } from '@videojs/react';
-// import { Video, VideoSkin } from '@videojs/react/video';
-
-// import '@videojs/react/video/minimal-skin.css';
+import { useRef } from 'react';
+import Slider from 'react-slick';
 import { LazyVideoPlayer } from './video-js-example/lazy';
 
-// const Player = createPlayer({ features: videoFeatures });
-
 const VideoOne = () => {
-  // const [isOpen, setIsOpen] = useState(false);
+  const sliderRef = useRef(null);
+
+  const settings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    speed: 600,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    draggable: true,
+  };
+
   return (
     <section className='video pt-120'>
       <div className='container'>
         <div className='section-heading text-center'>
-          {/* <div className='flex-align d-inline-flex gap-8 mb-16'>
-            <span className='text-main-600 text-2xl d-flex'>
-              <i className='ph-bold ph-book-open' />
-            </span>
-            <h5 className='text-main-600 mb-0'>Campus Life</h5>
-          </div> */}
-          <h2 className='mb-24 wow bounceIn'>Highlights</h2>
-          {/* <p className='wow bounceInDown'>
-            Welcome to our vibrant campus, where learning comes to life in a
-            dynamic and inspiring environment.
-          </p> */}
+          <h2 className='mb-24'>Highlights</h2>
         </div>
       </div>
-      {/* <div className='video-img position-relative half-bg'>
-        <div className='container wow bounceIn'>
-          <img
-            src='/services/services-12.png'
-            className='rounded-12 cover-img'
-            alt=''
-            data-tilt=''
-            data-tilt-max={4}
-            data-tilt-speed={500}
-            data-tilt-perspective={5000}
-            data-tilt-transition='1s'
-          />
-          <span
-            onClick={() => setIsOpen(true)}
-            className='play-button position-absolute start-50 top-50 translate-middle z-1 w-72 h-72 flex-center bg-main-two-600 text-white rounded-circle text-2xl'>
-            <i className='ph-fill ph-play' />
-          </span>
-        </div>
-      </div> */}
 
       <div className='video-img position-relative half-bg'>
-        <div className='container wow bounceIn'>
-          <LazyVideoPlayer
-            src={'/videos/counselling.mp4'}
-            poster={'/services/services-12.png'}
-            isAspectRatio={true}
-          />
+        <div className='container'>
+          <Slider ref={sliderRef} {...settings}>
+            <div className='px-2 px-md-5'>
+              <LazyVideoPlayer
+                src={'/videos/counselling.mp4'}
+                poster={'/services/services-12.png'}
+                isAspectRatio={true}
+              />
+            </div>
+            <div className='px-2 px-md-5'>
+              <LazyVideoPlayer
+                src={'/videos/qna.mp4'}
+                poster={'/services/services-13.png'}
+                isAspectRatio={true}
+              />
+            </div>
+            <div className='px-2 px-md-5'>
+              <LazyVideoPlayer
+                src={'/videos/Al Ameen College.mp4'}
+                poster={'/services/services-11.png'}
+                isAspectRatio={true}
+              />
+            </div>
+            <div className='px-2 px-md-5'>
+              <LazyVideoPlayer
+                src={'/videos/NEET_06.mp4'}
+                poster={'/services/services-10.png'}
+                isAspectRatio={true}
+              />
+            </div>
+          </Slider>
         </div>
-      </div>
 
-      {/* <ModalVideo
-        channel='youtube'
-        autoplay
-        isOpen={isOpen}
-        videoId='XxVg_s8xAms'
-        onClose={() => setIsOpen(false)}
-        allowFullScreen
-      /> */}
+        {/* Custom Arrows matching hero slider styles and positioned outside the container */}
+        <button
+          title={'Prev Video'}
+          type='button'
+          onClick={() => sliderRef.current?.slickPrev()}
+          className='slick-arrow-prev slick-arrow flex-center rounded-circle bg-white text-main-600 hover-border-main-600 text-2xl hover-bg-main-600 hover-text-white transition-1 w-56 h-56 position-absolute ms-16 inset-inline-start-0 top-50 translate-middle-y z-3'>
+          <i className='ph-bold ph-arrow-left' />
+        </button>
+        <button
+          title={'Next Video'}
+          type='button'
+          onClick={() => sliderRef.current?.slickNext()}
+          className='slick-arrow-next slick-arrow flex-center rounded-circle bg-white text-main-600 hover-border-main-600 text-2xl hover-bg-main-600 hover-text-white transition-1 w-56 h-56 position-absolute me-16 inset-inline-end-0 top-50 translate-middle-y z-3'>
+          <i className='ph-bold ph-arrow-right' />
+        </button>
+      </div>
     </section>
   );
 };
 
 export default VideoOne;
+
