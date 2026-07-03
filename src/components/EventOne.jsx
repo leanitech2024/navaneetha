@@ -153,14 +153,12 @@ const EventOne = () => {
             </Link>
           </div>
           <div className='col-xl-4'>
-            <div className='event-video rounded-16 overflow-hidden position-relative h-100 wow bounceIn'>
-              <div className='container wow bounceIn'>
-                <LazyVideoPlayer
-                  src={'/videos/highlights.mp4'}
-                  // poster={'/services/services-12.png'}
-                  isAspectRatio={false}
-                />
-              </div>
+            <div className='event-video event-video-vertical position-relative wow bounceIn'>
+              <LazyVideoPlayer
+                src={'/videos/highlights.mp4'}
+                poster={'/videos/thumbnails/events_vertical_thumbnail.png'}
+                isAspectRatio={false}
+              />
             </div>
 
             {/* <div className='event-video rounded-16 overflow-hidden position-relative h-100 wow bounceIn'>

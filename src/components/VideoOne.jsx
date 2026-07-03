@@ -28,36 +28,31 @@ const VideoOne = () => {
 
       <div className='video-img position-relative half-bg'>
         <div className='container'>
-          <Slider ref={sliderRef} {...settings}>
-            <div className='px-2 px-md-5'>
-              <LazyVideoPlayer
-                src={'/videos/counselling.mp4'}
-                poster={'/services/services-12.png'}
-                isAspectRatio={true}
-              />
-            </div>
-            <div className='px-2 px-md-5'>
-              <LazyVideoPlayer
-                src={'/videos/qna.mp4'}
-                poster={'/services/services-13.png'}
-                isAspectRatio={true}
-              />
-            </div>
-            <div className='px-2 px-md-5'>
-              <LazyVideoPlayer
-                src={'/videos/Al Ameen College.mp4'}
-                poster={'/services/services-11.png'}
-                isAspectRatio={true}
-              />
-            </div>
-            <div className='px-2 px-md-5'>
-              <LazyVideoPlayer
-                src={'/videos/NEET_06.mp4'}
-                poster={'/services/neet-thumbnail.png'}
-                isAspectRatio={true}
-              />
-            </div>
-          </Slider>
+          <div className='video-carousel-container'>
+            <Slider ref={sliderRef} {...settings}>
+              <div className='px-2 px-md-5'>
+                <LazyVideoPlayer
+                  src={'/videos/qna.mp4'}
+                  poster={'/videos/thumbnails/qna_vertical_thumbnail.png'}
+                  isAspectRatio={false}
+                />
+              </div>
+              <div className='px-2 px-md-5'>
+                <LazyVideoPlayer
+                  src={'/videos/Al Ameen College.mp4'}
+                  poster={'/videos/thumbnails/al_ameen_college_vertical_thumbnail.png'}
+                  isAspectRatio={false}
+                />
+              </div>
+              <div className='px-2 px-md-5'>
+                <LazyVideoPlayer
+                  src={'/videos/NEET_06.mp4'}
+                  poster={'/videos/thumbnails/neet_vertical_thumbnail.png'}
+                  isAspectRatio={false}
+                />
+              </div>
+            </Slider>
+          </div>
         </div>
 
         {/* Custom Arrows matching hero slider styles and positioned outside the container */}

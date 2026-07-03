@@ -151,3 +151,60 @@
 @media only screen and (max-width: 425px) {
   /*Small smartphones [325px -> 425px]*/
 }
+
+/* Variables for Layout Sizing */
+:root {
+  --navbar-height: 95px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --navbar-height: 70px;
+  }
+}
+
+/* Vertical Video Carousel Styling */
+.video-carousel-container {
+  height: calc(100dvh - var(--navbar-height));
+  aspect-ratio: 9 / 16;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .slick-slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide,
+  .slick-slide > div {
+    height: 100%;
+  }
+
+  .media-default-skin {
+    aspect-ratio: inherit !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 575px) {
+  .video-carousel-container {
+    padding: 0 10px;
+  }
+}
+
+/* Upcoming Events Vertical Video */
+.event-video-vertical {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+
+  .media-default-skin {
+    aspect-ratio: inherit !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
