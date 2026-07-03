@@ -32,23 +32,23 @@ const VideoOne = () => {
             <Slider ref={sliderRef} {...settings}>
               <div className='px-2 px-md-5'>
                 <LazyVideoPlayer
-                  src={'/videos/qna.mp4'}
-                  poster={'/videos/thumbnails/qna_vertical_thumbnail.png'}
-                  isAspectRatio={false}
+                  src={'/videos/1.mp4'}
+                  poster={'/videos/thumbnails/1.jpeg'}
+                  isAspectRatio={true}
                 />
               </div>
               <div className='px-2 px-md-5'>
                 <LazyVideoPlayer
-                  src={'/videos/Al Ameen College.mp4'}
-                  poster={'/videos/thumbnails/al_ameen_college_vertical_thumbnail.png'}
-                  isAspectRatio={false}
+                  src={'/videos/2.mp4'}
+                  poster={'/videos/thumbnails/2.jpeg'}
+                  isAspectRatio={true}
                 />
               </div>
               <div className='px-2 px-md-5'>
                 <LazyVideoPlayer
-                  src={'/videos/NEET_06.mp4'}
-                  poster={'/videos/thumbnails/neet_vertical_thumbnail.png'}
-                  isAspectRatio={false}
+                  src={'/videos/3.mp4'}
+                  poster={'/videos/thumbnails/3.jpeg'}
+                  isAspectRatio={true}
                 />
               </div>
             </Slider>
