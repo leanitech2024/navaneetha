@@ -24,7 +24,7 @@ const Animation = () => {
       offset: 0,
       easing: "ease",
       once: true,
-      duration: 1200,
+      duration: 2000,
     });
     Aos.refresh();
   }, []);

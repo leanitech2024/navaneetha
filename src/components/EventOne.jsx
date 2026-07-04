@@ -81,16 +81,16 @@ const EventOne = () => {
         <div className='row gy-4'>
           <div className='col-xl-8 pe-lg-5'>
             <div className='section-heading style-left'>
-              <div className='flex-align d-inline-flex gap-8 mb-16'>
+              <div className='flex-align d-inline-flex gap-8 mb-16 wow bounceInDown'>
                 <span className='text-main-600 text-2xl d-flex'>
                   <i className='ph-bold ph-book-open' />
                 </span>
                 <h5 className='text-main-600 mb-0'>Upcoming Events</h5>
               </div>
-              <h2 className='mb-24'>
+              <h2 className='mb-24 wow bounceInRight'>
                 Join Our Upcoming Events{' '}
               </h2>
-              <p className='text-neutral-500 text-line-4'>
+              <p className='text-neutral-500 text-line-4 wow bounceInUp'>
                 Join us for a variety of exciting events that cater to your
                 interests and learning needs. Our events are designed to inspire
                 and educate
@@ -100,6 +100,8 @@ const EventOne = () => {
               {upcomingEvents.map((event, index) => (
                 <div
                   className='event-item bg-main-25 rounded-12 p-24 d-flex align-items-center border border-neutral-20 min-width-max-content hover-bg-main-600 hover-border-main-600 hover-text-white transition-1 mb-24 justify-content-between'
+                  data-aos='fade-up-left'
+                  data-aos-duration={200}
                   key={event.id}>
                   <div className=''>
                     <h3 className='mb-8 text-main-600'>{event.date}</h3>
@@ -151,7 +153,7 @@ const EventOne = () => {
             </Link>
           </div>
           <div className='col-xl-4'>
-            <div className='event-video event-video-vertical position-relative'>
+            <div className='event-video event-video-vertical position-relative wow bounceIn'>
               <LazyVideoPlayer
                 src={'/videos/highlights.mp4'}
                 poster={'/videos/thumbnails/events_vertical_thumbnail.png'}
