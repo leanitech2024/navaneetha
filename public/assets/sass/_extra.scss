@@ -221,45 +221,18 @@
   }
 }
 
-/* Global Animation Tuning: Slow down animations across all sections */
-.wow,
-.animate__animated {
-  animation-duration: 2s !important;
+/* Disable scroll, entrance, and custom keyframe animations globally */
+*:not(.spinner-border):not(.media-preview__spinner):not(.spinner-border *):not(.media-preview__spinner *):not([class^="rfm-"]) {
+  animation: none !important;
 }
 
 [data-aos] {
-  transition-duration: 2000ms !important; /* Fallback for elements without explicit duration overrides */
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
 
-/* Proportionally slow down explicit AOS durations */
-[data-aos][data-aos-duration="200"] {
-  transition-duration: 500ms !important;
-}
-[data-aos][data-aos-duration="300"] {
-  transition-duration: 700ms !important;
-}
-[data-aos][data-aos-duration="400"] {
-  transition-duration: 900ms !important;
-}
-[data-aos][data-aos-duration="500"] {
-  transition-duration: 1100ms !important;
-}
-[data-aos][data-aos-duration="600"] {
-  transition-duration: 1300ms !important;
-}
-[data-aos][data-aos-duration="700"] {
-  transition-duration: 1500ms !important;
-}
-[data-aos][data-aos-duration="800"] {
-  transition-duration: 1700ms !important;
-}
-[data-aos][data-aos-duration="900"] {
-  transition-duration: 1900ms !important;
-}
-[data-aos][data-aos-duration="1000"] {
-  transition-duration: 2100ms !important;
-}
-[data-aos][data-aos-duration="1200"] {
-  transition-duration: 2400ms !important;
+.wow {
+  visibility: visible !important;
 }
 
