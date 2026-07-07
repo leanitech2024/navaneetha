@@ -58,6 +58,7 @@ export function EjectedVideoPlayer({
   className,
   poster,
   isAspectRatio = true,
+  preload = poster ? 'none' : 'metadata',
   ...rest
 }) {
   return (
@@ -65,7 +66,7 @@ export function EjectedVideoPlayer({
       <Container
         className={`media-default-skin media-default-skin--video ${className ?? ''}`}
         {...rest}>
-        <Video src={src} playsInline preload='none' data-aspect={isAspectRatio} />
+        <Video src={src} playsInline preload={preload} data-aspect={isAspectRatio} />
 
         {poster && (
           <Poster

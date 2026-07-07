@@ -4,6 +4,7 @@ import { testimonials } from '@/constants';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Slider from 'react-slick';
+import { LazyVideoPlayer } from './video-js-example/lazy';
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -284,6 +285,36 @@ const TestimonialsThree = () => {
                 className=' slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48'>
                 <i className='ph ph-caret-right' />
               </button>
+            </div>
+          </div>
+        </div>
+        <div className='row mt-56 align-items-center justify-content-between gy-4'>
+          <div className='col-lg-5 col-xl-5 wow bounceInLeft'>
+            <div className='p-40 bg-white rounded-12 box-shadow-md border-start border-main-600 border-4 position-relative'>
+              <span className='w-40 h-40 bg-main-two-600 flex-center border border-white border-2 rounded-circle position-absolute top-0 end-0 mt-16 me-16'>
+                <img
+                  src='assets/images/icons/quote-two-icon.png'
+                  alt=''
+                />
+              </span>
+              <div className='mb-24'>
+                <p className='text-main-600 fs-4 fw-semibold mb-8' style={{ fontStyle: 'italic', lineHeight: '1.4' }}>
+                  "Because Every Parents smile tells a story"
+                </p>
+              </div>
+              <div className='pt-24 border-top border-gray-100'>
+                <p className='text-neutral-500 fs-5 fw-medium' style={{ letterSpacing: '0.5px' }}>
+                  "Happy Parents, Successful students, Bright Futures"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-7 col-xl-7 wow bounceInRight'>
+            <div className='video-player-wrapper rounded-20 overflow-hidden box-shadow-lg position-relative z-1'>
+              <LazyVideoPlayer
+                src='/videos/testimonial/testimonial1.mp4#t=0.001'
+                isAspectRatio={true}
+              />
             </div>
           </div>
         </div>
